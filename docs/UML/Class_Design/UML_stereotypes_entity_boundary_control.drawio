@@ -1,0 +1,70 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.6.1 Chrome/142.0.7444.265 Electron/39.8.0 Safari/537.36" version="29.6.1">
+  <diagram name="Page-1" id="UpYabo5W8ZVd-ZJbirYX">
+    <mxGraphModel dx="1426" dy="1243" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="1920" pageHeight="1200" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="-LzpsslkYCdKFexy5BR2-1" parent="1" style="ellipse;shape=umlEntity;whiteSpace=wrap;html=1;fontFamily=Courier New;fontSize=14;verticalAlign=middle;" value="Entity Object" vertex="1">
+          <mxGeometry height="80" width="80" x="160" y="-25" as="geometry" />
+        </mxCell>
+        <mxCell id="-LzpsslkYCdKFexy5BR2-2" parent="1" style="shape=umlBoundary;whiteSpace=wrap;html=1;fontFamily=Courier New;fontSize=14;verticalAlign=middle;" value="Boundary Object" vertex="1">
+          <mxGeometry height="80" width="100" x="470" y="-90" as="geometry" />
+        </mxCell>
+        <mxCell id="-LzpsslkYCdKFexy5BR2-3" parent="1" style="ellipse;shape=umlControl;whiteSpace=wrap;html=1;fontFamily=Courier New;fontSize=14;verticalAlign=middle;" value="Control Object" vertex="1">
+          <mxGeometry height="80" width="70" x="800" y="-25" as="geometry" />
+        </mxCell>
+        <mxCell id="-LzpsslkYCdKFexy5BR2-4" parent="1" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;fontFamily=Courier New;fontSize=14;" value="" vertex="1">
+          <mxGeometry height="8" width="960" x="40" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="-LzpsslkYCdKFexy5BR2-6" edge="1" parent="1" style="endArrow=none;html=1;rounded=0;fontFamily=Courier New;fontSize=14;verticalAlign=middle;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="360" y="360" as="sourcePoint" />
+            <mxPoint x="360" y="-80" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-LzpsslkYCdKFexy5BR2-7" edge="1" parent="1" style="endArrow=none;html=1;rounded=0;fontFamily=Courier New;fontSize=14;verticalAlign=middle;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="680" y="360" as="sourcePoint" />
+            <mxPoint x="680" y="-80" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-LzpsslkYCdKFexy5BR2-8" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontFamily=Courier New;fontSize=14;" value="Models information that is long lived." vertex="1">
+          <mxGeometry height="30" width="150" x="125" y="95" as="geometry" />
+        </mxCell>
+        <mxCell id="-LzpsslkYCdKFexy5BR2-9" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontFamily=Courier New;fontSize=14;" value="Models interaction between software and its actors." vertex="1">
+          <mxGeometry height="30" width="150" x="445" y="95" as="geometry" />
+        </mxCell>
+        <mxCell id="-LzpsslkYCdKFexy5BR2-10" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontFamily=Courier New;fontSize=14;" value="Generally associated with I/O." vertex="1">
+          <mxGeometry height="30" width="150" x="445" y="25" as="geometry" />
+        </mxCell>
+        <mxCell id="-LzpsslkYCdKFexy5BR2-11" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontFamily=Courier New;fontSize=14;" value="Models complex computations and algorithms." vertex="1">
+          <mxGeometry height="30" width="150" x="760" y="95" as="geometry" />
+        </mxCell>
+        <mxCell id="-LzpsslkYCdKFexy5BR2-12" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontFamily=Courier New;fontSize=14;" value="Canvas" vertex="1">
+          <mxGeometry height="30" width="60" x="490" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="-LzpsslkYCdKFexy5BR2-13" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontFamily=Courier New;fontSize=14;" value="Alert" vertex="1">
+          <mxGeometry height="30" width="60" x="490" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="-LzpsslkYCdKFexy5BR2-14" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontFamily=Courier New;fontSize=14;" value="Button" vertex="1">
+          <mxGeometry height="30" width="60" x="490" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="-LzpsslkYCdKFexy5BR2-15" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontFamily=Courier New;fontSize=14;" value="Cannon" vertex="1">
+          <mxGeometry height="30" width="60" x="170" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="-LzpsslkYCdKFexy5BR2-16" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontFamily=Courier New;fontSize=14;" value="Timer" vertex="1">
+          <mxGeometry height="30" width="60" x="170" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="-LzpsslkYCdKFexy5BR2-17" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontFamily=Courier New;fontSize=14;" value="Target" vertex="1">
+          <mxGeometry height="30" width="60" x="805" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="-LzpsslkYCdKFexy5BR2-18" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontFamily=Courier New;fontSize=14;" value="Blocker" vertex="1">
+          <mxGeometry height="30" width="60" x="805" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="-LzpsslkYCdKFexy5BR2-19" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontFamily=Courier New;fontSize=14;" value="CannonBall" vertex="1">
+          <mxGeometry height="30" width="60" x="805" y="280" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
