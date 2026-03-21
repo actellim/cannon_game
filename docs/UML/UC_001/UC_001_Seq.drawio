@@ -1,0 +1,154 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.6.1 Chrome/142.0.7444.265 Electron/39.8.0 Safari/537.36" version="29.6.1">
+  <diagram name="Page-1" id="H_6ndi0RnOqx6Y6qTGjZ">
+    <mxGraphModel dx="1426" dy="843" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="1920" pageHeight="1200" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="q0g-cjcf5t098r4L7grX-4" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};participant=umlEntity;size=120;" value=":GameController" vertex="1">
+          <mxGeometry height="890" width="130" x="440" as="geometry" />
+        </mxCell>
+        <mxCell id="q0g-cjcf5t098r4L7grX-22" parent="q0g-cjcf5t098r4L7grX-4" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="340" width="10" x="60" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="q0g-cjcf5t098r4L7grX-37" parent="q0g-cjcf5t098r4L7grX-4" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="80" width="10" x="60" y="670" as="geometry" />
+        </mxCell>
+        <mxCell id="q0g-cjcf5t098r4L7grX-42" parent="q0g-cjcf5t098r4L7grX-4" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="80" width="10" x="60" y="810" as="geometry" />
+        </mxCell>
+        <mxCell id="q0g-cjcf5t098r4L7grX-5" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};participant=umlBoundary;size=120;align=center;" value=":Alert" vertex="1">
+          <mxGeometry height="890" width="150" x="280" as="geometry" />
+        </mxCell>
+        <mxCell id="q0g-cjcf5t098r4L7grX-19" parent="q0g-cjcf5t098r4L7grX-5" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="430" width="10" x="70" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="q0g-cjcf5t098r4L7grX-6" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};participant=umlBoundary;size=120;align=center;" value=":Button" vertex="1">
+          <mxGeometry height="900" width="150" x="120" as="geometry" />
+        </mxCell>
+        <mxCell id="q0g-cjcf5t098r4L7grX-16" parent="q0g-cjcf5t098r4L7grX-6" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="520" width="10" x="70" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="q0g-cjcf5t098r4L7grX-8" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};participant=umlBoundary;size=120;align=center;" value=":Canvas" vertex="1">
+          <mxGeometry height="890" width="150" x="580" as="geometry" />
+        </mxCell>
+        <mxCell id="q0g-cjcf5t098r4L7grX-25" parent="q0g-cjcf5t098r4L7grX-8" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="300" width="10" x="70" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="q0g-cjcf5t098r4L7grX-39" parent="q0g-cjcf5t098r4L7grX-8" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="60" width="10" x="70" y="720" as="geometry" />
+        </mxCell>
+        <mxCell id="q0g-cjcf5t098r4L7grX-9" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};participant=umlControl;size=120;" value=":Cannon" vertex="1">
+          <mxGeometry height="890" width="110" x="740" as="geometry" />
+        </mxCell>
+        <mxCell id="q0g-cjcf5t098r4L7grX-28" parent="q0g-cjcf5t098r4L7grX-9" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="50" width="10" x="50" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="q0g-cjcf5t098r4L7grX-10" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};participant=umlControl;size=120;" value=":Blocker" vertex="1">
+          <mxGeometry height="890" width="110" x="860" as="geometry" />
+        </mxCell>
+        <mxCell id="q0g-cjcf5t098r4L7grX-31" parent="q0g-cjcf5t098r4L7grX-10" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="80" width="10" x="50" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="q0g-cjcf5t098r4L7grX-11" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};participant=umlControl;size=120;" value=":Target" vertex="1">
+          <mxGeometry height="890" width="110" x="980" as="geometry" />
+        </mxCell>
+        <mxCell id="q0g-cjcf5t098r4L7grX-34" parent="q0g-cjcf5t098r4L7grX-11" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="80" width="10" x="50" y="440" as="geometry" />
+        </mxCell>
+        <mxCell id="q0g-cjcf5t098r4L7grX-12" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};participant=umlActor;size=120;" value="Player" vertex="1">
+          <mxGeometry height="900" width="60" x="40" as="geometry" />
+        </mxCell>
+        <mxCell id="q0g-cjcf5t098r4L7grX-13" parent="q0g-cjcf5t098r4L7grX-12" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="740" width="10" x="25" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="q0g-cjcf5t098r4L7grX-17" edge="1" parent="1" source="q0g-cjcf5t098r4L7grX-13" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;entryX=0;entryY=0;entryDx=0;entryDy=5;" target="q0g-cjcf5t098r4L7grX-16" value="1: Player clicks&amp;nbsp;&lt;div&gt;playButton&lt;/div&gt;">
+          <mxGeometry relative="1" x="-0.0041" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="120" y="165" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="q0g-cjcf5t098r4L7grX-20" edge="1" parent="1" source="q0g-cjcf5t098r4L7grX-16" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;entryX=0;entryY=0;entryDx=0;entryDy=5;" target="q0g-cjcf5t098r4L7grX-19" value="2: Alert attribute&amp;nbsp;&lt;div&gt;playButtonPressed&lt;/div&gt;&lt;div&gt;&amp;nbsp;becomes true&lt;/div&gt;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="280" y="205" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="q0g-cjcf5t098r4L7grX-21" edge="1" parent="1" source="q0g-cjcf5t098r4L7grX-19" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;curved=0;rounded=0;exitX=0;exitY=1;exitDx=0;exitDy=-5;" target="q0g-cjcf5t098r4L7grX-16" value="13: Game ready,&lt;div&gt;close Button.&lt;/div&gt;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="280" y="275" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="q0g-cjcf5t098r4L7grX-23" edge="1" parent="1" source="q0g-cjcf5t098r4L7grX-19" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;entryX=0;entryY=0;entryDx=0;entryDy=5;" target="q0g-cjcf5t098r4L7grX-22" value="3: GameController is&lt;div&gt;informed of&amp;nbsp;&lt;/div&gt;&lt;div&gt;playButonPressed&lt;/div&gt;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="430" y="225" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="q0g-cjcf5t098r4L7grX-24" edge="1" parent="1" source="q0g-cjcf5t098r4L7grX-22" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;curved=0;rounded=0;exitX=0;exitY=1;exitDx=0;exitDy=-5;" target="q0g-cjcf5t098r4L7grX-19" value="12: Game ready,&lt;div&gt;timer starts,&lt;/div&gt;&lt;div&gt;close Alert.&lt;/div&gt;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="430" y="295" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="q0g-cjcf5t098r4L7grX-26" edge="1" parent="1" source="q0g-cjcf5t098r4L7grX-22" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;entryX=0;entryY=0;entryDx=0;entryDy=5;" target="q0g-cjcf5t098r4L7grX-25" value="4: GameController starts&lt;div&gt;a newGame.&lt;/div&gt;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="580" y="255" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="q0g-cjcf5t098r4L7grX-27" edge="1" parent="1" source="q0g-cjcf5t098r4L7grX-25" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;curved=0;rounded=0;exitX=0;exitY=1;exitDx=0;exitDy=-5;" target="q0g-cjcf5t098r4L7grX-22" value="11: Canvas loaded.">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="580" y="325" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="q0g-cjcf5t098r4L7grX-29" edge="1" parent="1" source="q0g-cjcf5t098r4L7grX-25" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;entryX=0;entryY=0;entryDx=0;entryDy=5;" target="q0g-cjcf5t098r4L7grX-28" value="5: Canvas creates an&lt;div&gt;instance of Cannon.&lt;/div&gt;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="720" y="265" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="q0g-cjcf5t098r4L7grX-30" edge="1" parent="1" source="q0g-cjcf5t098r4L7grX-28" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;curved=0;rounded=0;exitX=0;exitY=1;exitDx=0;exitDy=-5;" target="q0g-cjcf5t098r4L7grX-25" value="6: cannon created.">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="720" y="335" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="q0g-cjcf5t098r4L7grX-32" edge="1" parent="1" source="q0g-cjcf5t098r4L7grX-25" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;entryX=0;entryY=0;entryDx=0;entryDy=5;" target="q0g-cjcf5t098r4L7grX-31" value="7: Canvas creates an instance of Blocker.">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="840" y="345" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="q0g-cjcf5t098r4L7grX-33" edge="1" parent="1" source="q0g-cjcf5t098r4L7grX-31" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;curved=0;rounded=0;exitX=0;exitY=1;exitDx=0;exitDy=-5;" target="q0g-cjcf5t098r4L7grX-25" value="8: blocker returned.">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="840" y="415" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="q0g-cjcf5t098r4L7grX-35" edge="1" parent="1" source="q0g-cjcf5t098r4L7grX-25" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;entryX=0;entryY=0;entryDx=0;entryDy=5;" target="q0g-cjcf5t098r4L7grX-34" value="9: Canvas creates 9 instances of Target.">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="960" y="445" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="q0g-cjcf5t098r4L7grX-36" edge="1" parent="1" source="q0g-cjcf5t098r4L7grX-34" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;curved=0;rounded=0;exitX=0;exitY=1;exitDx=0;exitDy=-5;" target="q0g-cjcf5t098r4L7grX-25" value="10: targets returned.">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="960" y="515" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="q0g-cjcf5t098r4L7grX-38" edge="1" parent="1" source="q0g-cjcf5t098r4L7grX-16" style="html=1;verticalAlign=bottom;startArrow=oval;endArrow=block;startSize=8;curved=0;rounded=0;entryX=0;entryY=0;entryDx=0;entryDy=5;exitX=1;exitY=1;exitDx=0;exitDy=-5;exitPerimeter=0;" target="q0g-cjcf5t098r4L7grX-37" value="14: Button closed, Alert closed.">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="430" y="675" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="q0g-cjcf5t098r4L7grX-40" edge="1" parent="1" source="q0g-cjcf5t098r4L7grX-37" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;entryX=0;entryY=0;entryDx=0;entryDy=5;" target="q0g-cjcf5t098r4L7grX-39" value="15: Game ready, display&amp;nbsp;&lt;div&gt;Canvas.&lt;/div&gt;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="580" y="725" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="q0g-cjcf5t098r4L7grX-41" edge="1" parent="1" source="q0g-cjcf5t098r4L7grX-39" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;curved=0;rounded=0;exitX=0;exitY=1;exitDx=0;exitDy=-5;" target="q0g-cjcf5t098r4L7grX-13" value="16: Canvas displayed to Player.">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="580" y="795" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="q0g-cjcf5t098r4L7grX-43" edge="1" parent="1" source="q0g-cjcf5t098r4L7grX-13" style="html=1;verticalAlign=bottom;startArrow=oval;endArrow=block;startSize=8;curved=0;rounded=0;entryX=0;entryY=0;entryDx=0;entryDy=5;" target="q0g-cjcf5t098r4L7grX-42" value="17: Canvas displayed, game start.">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="430" y="815" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
