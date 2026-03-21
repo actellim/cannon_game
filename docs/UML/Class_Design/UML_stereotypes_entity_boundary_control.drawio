@@ -50,10 +50,10 @@
           <mxGeometry height="30" width="60" x="490" y="200" as="geometry" />
         </mxCell>
         <mxCell id="-LzpsslkYCdKFexy5BR2-15" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontFamily=Courier New;fontSize=14;" value="Cannon" vertex="1">
-          <mxGeometry height="30" width="60" x="170" y="240" as="geometry" />
+          <mxGeometry height="30" width="60" x="805" y="320" as="geometry" />
         </mxCell>
-        <mxCell id="-LzpsslkYCdKFexy5BR2-16" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontFamily=Courier New;fontSize=14;" value="Timer" vertex="1">
-          <mxGeometry height="30" width="60" x="170" y="200" as="geometry" />
+        <mxCell id="-LzpsslkYCdKFexy5BR2-16" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontFamily=Courier New;fontSize=14;" value="Game Controller" vertex="1">
+          <mxGeometry height="30" width="100" x="150" y="200" as="geometry" />
         </mxCell>
         <mxCell id="-LzpsslkYCdKFexy5BR2-17" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontFamily=Courier New;fontSize=14;" value="Target" vertex="1">
           <mxGeometry height="30" width="60" x="805" y="200" as="geometry" />
