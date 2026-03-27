@@ -1,191 +1,209 @@
-<mxfile host="Electron" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.6.1 Chrome/142.0.7444.265 Electron/39.8.0 Safari/537.36" version="29.6.1">
+<mxfile host="Electron" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.6.6 Chrome/144.0.7559.236 Electron/40.8.4 Safari/537.36" scale="1" border="20" version="29.6.6">
   <diagram name="Page-1" id="H_6ndi0RnOqx6Y6qTGjZ">
     <mxGraphModel dx="1783" dy="1054" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="1920" pageHeight="1200" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="q0g-cjcf5t098r4L7grX-4" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};participant=umlEntity;size=120;" value=":GameController" vertex="1">
-          <mxGeometry height="1040" width="130" x="760" as="geometry" />
-        </mxCell>
-        <mxCell id="q0g-cjcf5t098r4L7grX-68" parent="q0g-cjcf5t098r4L7grX-4" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
-          <mxGeometry height="10" width="10" x="60" y="340" as="geometry" />
-        </mxCell>
-        <mxCell id="q0g-cjcf5t098r4L7grX-75" parent="q0g-cjcf5t098r4L7grX-4" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
-          <mxGeometry height="15" width="10" x="60" y="465" as="geometry" />
-        </mxCell>
-        <mxCell id="q0g-cjcf5t098r4L7grX-79" parent="q0g-cjcf5t098r4L7grX-4" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
-          <mxGeometry height="10" width="10" x="60" y="500" as="geometry" />
-        </mxCell>
-        <mxCell id="q0g-cjcf5t098r4L7grX-89" parent="q0g-cjcf5t098r4L7grX-4" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
-          <mxGeometry height="10" width="10" x="60" y="760" as="geometry" />
+        <mxCell id="q0g-cjcf5t098r4L7grX-4" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};participant=umlEntity;size=120;" value=":Target" vertex="1">
+          <mxGeometry height="1040" width="130" x="810" as="geometry" />
         </mxCell>
         <mxCell id="q0g-cjcf5t098r4L7grX-8" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};participant=umlBoundary;size=120;align=center;" value=":Canvas" vertex="1">
           <mxGeometry height="1040" width="150" x="120" as="geometry" />
         </mxCell>
-        <mxCell id="q0g-cjcf5t098r4L7grX-45" parent="q0g-cjcf5t098r4L7grX-8" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
-          <mxGeometry height="820" width="10" x="70" y="160" as="geometry" />
+        <mxCell id="MQVEfYuJuDoP7klM05_k-17" parent="q0g-cjcf5t098r4L7grX-8" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="860" width="10" x="70" y="150" as="geometry" />
         </mxCell>
-        <mxCell id="q0g-cjcf5t098r4L7grX-9" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};participant=umlControl;size=120;" value=":Cannon" vertex="1">
+        <mxCell id="q0g-cjcf5t098r4L7grX-9" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};participant=umlControl;size=120;" value=":Timer" vertex="1">
+          <mxGeometry height="1040" width="110" x="1100" as="geometry" />
+        </mxCell>
+        <mxCell id="MQVEfYuJuDoP7klM05_k-57" parent="q0g-cjcf5t098r4L7grX-9" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="40" width="10" x="50" y="720" as="geometry" />
+        </mxCell>
+        <mxCell id="q0g-cjcf5t098r4L7grX-10" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};participant=umlControl;size=120;" value=":CollisionDetector" vertex="1">
+          <mxGeometry height="1040" width="110" x="680" as="geometry" />
+        </mxCell>
+        <mxCell id="MQVEfYuJuDoP7klM05_k-34" parent="q0g-cjcf5t098r4L7grX-10" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="40" width="10" x="60" y="350" as="geometry" />
+        </mxCell>
+        <mxCell id="q0g-cjcf5t098r4L7grX-11" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};participant=umlControl;size=120;" value=":GameController" vertex="1">
           <mxGeometry height="1040" width="110" x="280" as="geometry" />
         </mxCell>
-        <mxCell id="q0g-cjcf5t098r4L7grX-50" parent="q0g-cjcf5t098r4L7grX-9" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
-          <mxGeometry height="780" width="10" x="50" y="180" as="geometry" />
-        </mxCell>
-        <mxCell id="q0g-cjcf5t098r4L7grX-10" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};participant=umlControl;size=120;" value=":Blocker" vertex="1">
-          <mxGeometry height="1040" width="110" x="520" as="geometry" />
-        </mxCell>
-        <mxCell id="q0g-cjcf5t098r4L7grX-84" parent="q0g-cjcf5t098r4L7grX-10" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
-          <mxGeometry height="100" width="10" x="50" y="680" as="geometry" />
-        </mxCell>
-        <mxCell id="q0g-cjcf5t098r4L7grX-87" parent="q0g-cjcf5t098r4L7grX-10" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
-          <mxGeometry height="40" width="10" x="55" y="710" as="geometry" />
-        </mxCell>
-        <mxCell id="q0g-cjcf5t098r4L7grX-88" edge="1" parent="q0g-cjcf5t098r4L7grX-10" style="html=1;align=left;spacingLeft=2;endArrow=block;rounded=0;edgeStyle=orthogonalEdgeStyle;curved=0;rounded=0;" target="q0g-cjcf5t098r4L7grX-87" value="8. blocker_hit.wav&lt;div&gt;plays.&lt;/div&gt;">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="90" y="720" />
-            </Array>
-            <mxPoint x="60" y="690" as="sourcePoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="q0g-cjcf5t098r4L7grX-11" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};participant=umlControl;size=120;" value=":Target" vertex="1">
-          <mxGeometry height="1040" width="110" x="640" as="geometry" />
-        </mxCell>
-        <mxCell id="q0g-cjcf5t098r4L7grX-70" parent="q0g-cjcf5t098r4L7grX-11" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
-          <mxGeometry height="210" width="10" x="50" y="380" as="geometry" />
-        </mxCell>
-        <mxCell id="q0g-cjcf5t098r4L7grX-73" parent="q0g-cjcf5t098r4L7grX-11" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
-          <mxGeometry height="40" width="10" x="55" y="410" as="geometry" />
-        </mxCell>
-        <mxCell id="q0g-cjcf5t098r4L7grX-74" edge="1" parent="q0g-cjcf5t098r4L7grX-11" style="html=1;align=left;spacingLeft=2;endArrow=block;rounded=0;edgeStyle=orthogonalEdgeStyle;curved=0;rounded=0;" target="q0g-cjcf5t098r4L7grX-73" value="8. target_hit.wav&lt;div&gt;plays.&lt;/div&gt;">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="90" y="420" />
-            </Array>
-            <mxPoint x="60" y="390" as="sourcePoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="q0g-cjcf5t098r4L7grX-81" parent="q0g-cjcf5t098r4L7grX-11" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
-          <mxGeometry height="40" width="10" x="55" y="540" as="geometry" />
-        </mxCell>
-        <mxCell id="q0g-cjcf5t098r4L7grX-82" edge="1" parent="q0g-cjcf5t098r4L7grX-11" style="html=1;align=left;spacingLeft=2;endArrow=block;rounded=0;edgeStyle=orthogonalEdgeStyle;curved=0;rounded=0;" target="q0g-cjcf5t098r4L7grX-81" value="11. target&amp;nbsp;&lt;div&gt;despawns.&lt;/div&gt;">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="90" y="550" />
-            </Array>
-            <mxPoint x="60" y="520" as="sourcePoint" />
-          </mxGeometry>
+        <mxCell id="MQVEfYuJuDoP7klM05_k-25" parent="q0g-cjcf5t098r4L7grX-11" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="690" width="10" x="50" y="210" as="geometry" />
         </mxCell>
         <mxCell id="q0g-cjcf5t098r4L7grX-12" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};participant=umlActor;size=120;" value="Player" vertex="1">
           <mxGeometry height="1040" width="60" x="40" as="geometry" />
         </mxCell>
         <mxCell id="q0g-cjcf5t098r4L7grX-13" parent="q0g-cjcf5t098r4L7grX-12" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
-          <mxGeometry height="880" width="10" x="25" y="120" as="geometry" />
+          <mxGeometry height="900" width="10" x="25" y="120" as="geometry" />
         </mxCell>
-        <mxCell id="q0g-cjcf5t098r4L7grX-44" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};participant=umlControl;size=120;" value=":CannonBall" vertex="1">
-          <mxGeometry height="1040" width="110" x="400" as="geometry" />
+        <mxCell id="q0g-cjcf5t098r4L7grX-44" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};participant=umlControl;size=120;" value=":SoundManager" vertex="1">
+          <mxGeometry height="1040" width="110" x="1220" as="geometry" />
         </mxCell>
-        <mxCell id="q0g-cjcf5t098r4L7grX-53" parent="q0g-cjcf5t098r4L7grX-44" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
-          <mxGeometry height="750" width="10" x="50" y="190" as="geometry" />
+        <mxCell id="MQVEfYuJuDoP7klM05_k-44" parent="q0g-cjcf5t098r4L7grX-44" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="20" width="10" x="50" y="250" as="geometry" />
         </mxCell>
-        <mxCell id="q0g-cjcf5t098r4L7grX-58" parent="q0g-cjcf5t098r4L7grX-44" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
-          <mxGeometry height="40" width="10" x="55" y="220" as="geometry" />
+        <mxCell id="MQVEfYuJuDoP7klM05_k-1" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};participant=umlEntity;size=120;" value=":Blocker" vertex="1">
+          <mxGeometry height="1040" width="130" x="960" as="geometry" />
         </mxCell>
-        <mxCell id="q0g-cjcf5t098r4L7grX-59" edge="1" parent="q0g-cjcf5t098r4L7grX-44" style="html=1;align=left;spacingLeft=2;endArrow=block;rounded=0;edgeStyle=orthogonalEdgeStyle;curved=0;rounded=0;" target="q0g-cjcf5t098r4L7grX-58" value="4. cannon_fire.wav&lt;div&gt;plays.&lt;/div&gt;">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="90" y="230" />
-            </Array>
-            <mxPoint x="60" y="200" as="sourcePoint" />
+        <mxCell id="MQVEfYuJuDoP7klM05_k-6" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};participant=umlEntity;size=120;" value=":CannonBall" vertex="1">
+          <mxGeometry height="1040" width="130" x="540" as="geometry" />
+        </mxCell>
+        <mxCell id="MQVEfYuJuDoP7klM05_k-30" parent="MQVEfYuJuDoP7klM05_k-6" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="40" width="10" x="60" y="290" as="geometry" />
+        </mxCell>
+        <mxCell id="MQVEfYuJuDoP7klM05_k-11" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};participant=umlEntity;size=120;" value=":Canon" vertex="1">
+          <mxGeometry height="1040" width="130" x="400" as="geometry" />
+        </mxCell>
+        <mxCell id="MQVEfYuJuDoP7klM05_k-28" parent="MQVEfYuJuDoP7klM05_k-11" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="10" width="10" x="60" y="230" as="geometry" />
+        </mxCell>
+        <mxCell id="MQVEfYuJuDoP7klM05_k-18" edge="1" parent="1" source="q0g-cjcf5t098r4L7grX-13" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;entryX=0;entryY=0;entryDx=0;entryDy=5;entryPerimeter=0;" target="MQVEfYuJuDoP7klM05_k-17" value="Player clicks on&amp;nbsp;&lt;div&gt;the Canvas&lt;/div&gt;">
+          <mxGeometry relative="1" width="80" as="geometry">
+            <mxPoint x="100" y="160" as="sourcePoint" />
+            <mxPoint x="180" y="160" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="q0g-cjcf5t098r4L7grX-63" parent="q0g-cjcf5t098r4L7grX-44" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
-          <mxGeometry height="40" width="10" x="55" y="290.04" as="geometry" />
-        </mxCell>
-        <mxCell id="q0g-cjcf5t098r4L7grX-64" edge="1" parent="q0g-cjcf5t098r4L7grX-44" style="html=1;align=left;spacingLeft=2;endArrow=block;rounded=0;edgeStyle=orthogonalEdgeStyle;curved=0;rounded=0;" target="q0g-cjcf5t098r4L7grX-63" value="5. CannonBall&lt;div&gt;checks for&lt;/div&gt;&lt;div&gt;collision.&lt;/div&gt;">
+        <mxCell id="MQVEfYuJuDoP7klM05_k-26" edge="1" parent="1" source="MQVEfYuJuDoP7klM05_k-17" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;entryX=0;entryY=0;entryDx=0;entryDy=5;" target="MQVEfYuJuDoP7klM05_k-25" value="1: Canvas passes&amp;nbsp;&lt;div&gt;click location to&amp;nbsp;&lt;/div&gt;&lt;div&gt;GameController&lt;/div&gt;">
           <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="90" y="300.04" />
-            </Array>
-            <mxPoint x="60" y="270.04" as="sourcePoint" />
+            <mxPoint x="260" y="275" as="sourcePoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="q0g-cjcf5t098r4L7grX-92" parent="q0g-cjcf5t098r4L7grX-44" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
-          <mxGeometry height="40" width="10" x="55" y="840" as="geometry" />
-        </mxCell>
-        <mxCell id="q0g-cjcf5t098r4L7grX-93" edge="1" parent="q0g-cjcf5t098r4L7grX-44" style="html=1;align=left;spacingLeft=2;endArrow=block;rounded=0;edgeStyle=orthogonalEdgeStyle;curved=0;rounded=0;" target="q0g-cjcf5t098r4L7grX-92" value="7. CannonBall&amp;nbsp;&lt;div&gt;despawns.&lt;/div&gt;">
+        <mxCell id="MQVEfYuJuDoP7klM05_k-27" edge="1" parent="1" source="MQVEfYuJuDoP7klM05_k-25" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;curved=0;rounded=0;exitX=0;exitY=1;exitDx=0;exitDy=-5;" target="MQVEfYuJuDoP7klM05_k-17" value="Updated list of objects&lt;div&gt;passed to Canvas&lt;/div&gt;">
           <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="90" y="850" />
-            </Array>
-            <mxPoint x="60" y="820" as="sourcePoint" />
+            <mxPoint x="260" y="345" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="q0g-cjcf5t098r4L7grX-46" edge="1" parent="1" source="q0g-cjcf5t098r4L7grX-13" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;entryX=0;entryY=0;entryDx=0;entryDy=5;" target="q0g-cjcf5t098r4L7grX-45" value="1: Player clicks&amp;nbsp;&lt;div&gt;on the canvas.&lt;/div&gt;">
+        <mxCell id="MQVEfYuJuDoP7klM05_k-29" edge="1" parent="1" source="MQVEfYuJuDoP7klM05_k-25" style="html=1;verticalAlign=bottom;startArrow=oval;endArrow=block;startSize=8;curved=0;rounded=0;entryX=0;entryY=0;entryDx=0;entryDy=5;" target="MQVEfYuJuDoP7klM05_k-28" value="2: Cannon rotates&lt;div&gt;to point at the&lt;/div&gt;&lt;div&gt;clickLocation&lt;/div&gt;">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="120" y="165" as="sourcePoint" />
+            <mxPoint x="390" y="235" as="sourcePoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="q0g-cjcf5t098r4L7grX-51" edge="1" parent="1" source="q0g-cjcf5t098r4L7grX-45" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;entryX=0;entryY=0;entryDx=0;entryDy=5;" target="q0g-cjcf5t098r4L7grX-50" value="2: Cannon rotates&lt;div&gt;to align with click&lt;/div&gt;&lt;div&gt;position.&lt;/div&gt;">
+        <mxCell id="MQVEfYuJuDoP7klM05_k-31" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;entryX=0;entryY=0;entryDx=0;entryDy=5;" target="MQVEfYuJuDoP7klM05_k-30" value="4: Create a new CannonBall">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="260" y="185" as="sourcePoint" />
+            <mxPoint x="340" y="295" as="sourcePoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="q0g-cjcf5t098r4L7grX-54" edge="1" parent="1" source="q0g-cjcf5t098r4L7grX-50" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;entryX=0;entryY=0;entryDx=0;entryDy=5;" target="q0g-cjcf5t098r4L7grX-53" value="3: CannonBall spawns&lt;div&gt;and travels in a&amp;nbsp;&lt;/div&gt;&lt;div&gt;straight line to&lt;/div&gt;&lt;div&gt;the click location.&lt;/div&gt;">
+        <mxCell id="MQVEfYuJuDoP7klM05_k-32" edge="1" parent="1" source="MQVEfYuJuDoP7klM05_k-30" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;curved=0;rounded=0;exitX=0;exitY=1;exitDx=0;exitDy=-5;" value="5: Returns updated list of CannonBalls">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="380" y="195" as="sourcePoint" />
+            <mxPoint x="340" y="325" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="q0g-cjcf5t098r4L7grX-69" edge="1" parent="1" source="q0g-cjcf5t098r4L7grX-53" style="html=1;verticalAlign=bottom;startArrow=oval;endArrow=block;startSize=8;curved=0;rounded=0;entryX=0;entryY=0;entryDx=0;entryDy=5;" target="q0g-cjcf5t098r4L7grX-68" value="6. shotCounter increments.">
+        <mxCell id="MQVEfYuJuDoP7klM05_k-35" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;entryX=0;entryY=0;entryDx=0;entryDy=5;" target="MQVEfYuJuDoP7klM05_k-34" value="6: Check for collision">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="750" y="345" as="sourcePoint" />
+            <mxPoint x="340" y="355" as="sourcePoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="q0g-cjcf5t098r4L7grX-71" edge="1" parent="1" source="q0g-cjcf5t098r4L7grX-53" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;entryX=0;entryY=0;entryDx=0;entryDy=5;" target="q0g-cjcf5t098r4L7grX-70" value="7. CannonBall contacts a Target.">
+        <mxCell id="MQVEfYuJuDoP7klM05_k-36" edge="1" parent="1" source="MQVEfYuJuDoP7klM05_k-34" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;curved=0;rounded=0;exitX=0;exitY=1;exitDx=0;exitDy=-5;" value="7: Collision detected, list of game objects returned.">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="620" y="375" as="sourcePoint" />
+            <mxPoint x="340" y="385" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="q0g-cjcf5t098r4L7grX-72" edge="1" parent="1" source="q0g-cjcf5t098r4L7grX-70" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;curved=0;rounded=0;exitX=0;exitY=1;exitDx=0;exitDy=-5;" target="q0g-cjcf5t098r4L7grX-53" value="12. CannonBall despawns.">
+        <mxCell id="MQVEfYuJuDoP7klM05_k-37" parent="1" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;width=100;height=20;" value="Hit Target" vertex="1">
+          <mxGeometry height="210" width="990" x="310" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="MQVEfYuJuDoP7klM05_k-38" parent="1" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="40" width="10" x="870" y="450" as="geometry" />
+        </mxCell>
+        <mxCell id="MQVEfYuJuDoP7klM05_k-39" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;entryX=0;entryY=0;entryDx=0;entryDy=5;" target="MQVEfYuJuDoP7klM05_k-38" value="8: Target hit, remove struck target.">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="620" y="445" as="targetPoint" />
+            <mxPoint x="340" y="455" as="sourcePoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="q0g-cjcf5t098r4L7grX-76" edge="1" parent="1" source="q0g-cjcf5t098r4L7grX-70" style="html=1;verticalAlign=bottom;startArrow=oval;endArrow=block;startSize=8;curved=0;rounded=0;entryX=0;entryY=0;entryDx=0;entryDy=5;" target="q0g-cjcf5t098r4L7grX-75" value="9. 3s added to totalTime">
+        <mxCell id="MQVEfYuJuDoP7klM05_k-40" edge="1" parent="1" source="MQVEfYuJuDoP7klM05_k-38" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;curved=0;rounded=0;exitX=0;exitY=1;exitDx=0;exitDy=-5;" value="9: Updated list of targets returned.">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="750" y="470" as="sourcePoint" />
+            <mxPoint x="340" y="485" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="q0g-cjcf5t098r4L7grX-80" edge="1" parent="1" source="q0g-cjcf5t098r4L7grX-70" style="html=1;verticalAlign=bottom;startArrow=oval;endArrow=block;startSize=8;curved=0;rounded=0;entryX=0;entryY=0;entryDx=0;entryDy=5;" target="q0g-cjcf5t098r4L7grX-79" value="10. targetCounter&amp;nbsp;&lt;div&gt;decriments.&lt;/div&gt;">
+        <mxCell id="MQVEfYuJuDoP7klM05_k-41" parent="1" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="40" width="10" x="600" y="510" as="geometry" />
+        </mxCell>
+        <mxCell id="MQVEfYuJuDoP7klM05_k-42" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;entryX=0;entryY=0;entryDx=0;entryDy=5;" target="MQVEfYuJuDoP7klM05_k-41" value="10: Target hit, remove striking ball.">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="750" y="505" as="sourcePoint" />
+            <mxPoint x="340" y="515" as="sourcePoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="q0g-cjcf5t098r4L7grX-83" parent="1" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;" value="Target Hit" vertex="1">
-          <mxGeometry height="270" width="490" x="380" y="360" as="geometry" />
-        </mxCell>
-        <mxCell id="q0g-cjcf5t098r4L7grX-85" edge="1" parent="1" source="q0g-cjcf5t098r4L7grX-53" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;entryX=0;entryY=0;entryDx=0;entryDy=5;" target="q0g-cjcf5t098r4L7grX-84" value="7. CannonBall&amp;nbsp;&lt;div&gt;contactacts&lt;div&gt;the Blocker.&lt;/div&gt;&lt;/div&gt;">
+        <mxCell id="MQVEfYuJuDoP7klM05_k-43" edge="1" parent="1" source="MQVEfYuJuDoP7klM05_k-41" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;curved=0;rounded=0;exitX=0;exitY=1;exitDx=0;exitDy=-5;" value="11: Updated list of cannonballs returned.">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="500" y="675" as="sourcePoint" />
+            <mxPoint x="340" y="545" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="q0g-cjcf5t098r4L7grX-86" edge="1" parent="1" source="q0g-cjcf5t098r4L7grX-84" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;curved=0;rounded=0;exitX=0;exitY=1;exitDx=0;exitDy=-5;" target="q0g-cjcf5t098r4L7grX-53" value="10. CannonBall&lt;div&gt;despawns.&lt;/div&gt;">
+        <mxCell id="MQVEfYuJuDoP7klM05_k-45" edge="1" parent="1" style="html=1;verticalAlign=bottom;startArrow=oval;endArrow=block;startSize=8;curved=0;rounded=0;entryX=0;entryY=0;entryDx=0;entryDy=5;" value="3: Play `cannon_fire.wav`.">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint as="offset" />
-            <mxPoint x="500" y="745" as="targetPoint" />
+            <mxPoint x="330" y="260" as="sourcePoint" />
+            <mxPoint x="1270" y="260" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="q0g-cjcf5t098r4L7grX-90" edge="1" parent="1" source="q0g-cjcf5t098r4L7grX-84" style="html=1;verticalAlign=bottom;startArrow=oval;endArrow=block;startSize=8;curved=0;rounded=0;entryX=0;entryY=0;entryDx=0;entryDy=5;" target="q0g-cjcf5t098r4L7grX-89" value="9. 3s removed from totalTime.">
+        <mxCell id="MQVEfYuJuDoP7klM05_k-46" parent="1" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="10" width="10" x="1270" y="420" as="geometry" />
+        </mxCell>
+        <mxCell id="MQVEfYuJuDoP7klM05_k-47" edge="1" parent="1" source="MQVEfYuJuDoP7klM05_k-25" style="html=1;verticalAlign=bottom;startArrow=oval;endArrow=block;startSize=8;curved=0;rounded=0;entryX=0;entryY=0;entryDx=0;entryDy=5;" target="MQVEfYuJuDoP7klM05_k-46" value="8: Play `target_hit.wav`">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint as="offset" />
-            <mxPoint x="750" y="765" as="sourcePoint" />
+            <mxPoint x="1200" y="425" as="sourcePoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="q0g-cjcf5t098r4L7grX-91" parent="1" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;" value="Blocker Hit" vertex="1">
-          <mxGeometry height="160" width="490" x="380" y="640" as="geometry" />
+        <mxCell id="MQVEfYuJuDoP7klM05_k-51" parent="1" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="40" width="10" x="1150" y="550" as="geometry" />
         </mxCell>
-        <mxCell id="q0g-cjcf5t098r4L7grX-94" parent="1" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;" value="Miss" vertex="1">
-          <mxGeometry height="140" width="220" x="380" y="810" as="geometry" />
+        <mxCell id="MQVEfYuJuDoP7klM05_k-52" edge="1" parent="1" source="MQVEfYuJuDoP7klM05_k-25" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;entryX=0;entryY=0;entryDx=0;entryDy=5;" target="MQVEfYuJuDoP7klM05_k-51" value="12: Add 3 seconds to the total time.">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1080" y="555" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MQVEfYuJuDoP7klM05_k-53" edge="1" parent="1" source="MQVEfYuJuDoP7klM05_k-51" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;curved=0;rounded=0;exitX=0;exitY=1;exitDx=0;exitDy=-5;" target="MQVEfYuJuDoP7klM05_k-25" value="13: New total time returned.">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1080" y="625" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MQVEfYuJuDoP7klM05_k-54" parent="1" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;width=100;height=20;" value="alt: Hit Blocker" vertex="1">
+          <mxGeometry height="170" width="990" x="310" y="610" as="geometry" />
+        </mxCell>
+        <mxCell id="MQVEfYuJuDoP7klM05_k-55" parent="1" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="10" width="10" x="1270" y="630" as="geometry" />
+        </mxCell>
+        <mxCell id="MQVEfYuJuDoP7klM05_k-56" edge="1" parent="1" source="MQVEfYuJuDoP7klM05_k-25" style="html=1;verticalAlign=bottom;startArrow=oval;endArrow=block;startSize=8;curved=0;rounded=0;entryX=0;entryY=0;entryDx=0;entryDy=5;" target="MQVEfYuJuDoP7klM05_k-55" value="8: Play `blocker_hit.wav`.">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1200" y="635" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MQVEfYuJuDoP7klM05_k-58" edge="1" parent="1" source="MQVEfYuJuDoP7klM05_k-25" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;entryX=0;entryY=0;entryDx=0;entryDy=5;" target="MQVEfYuJuDoP7klM05_k-57" value="11: Remove 3 seconds from the total time.">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1090" y="665" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MQVEfYuJuDoP7klM05_k-59" edge="1" parent="1" source="MQVEfYuJuDoP7klM05_k-57" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;curved=0;rounded=0;exitX=0;exitY=1;exitDx=0;exitDy=-5;" target="MQVEfYuJuDoP7klM05_k-25" value="12: New total time returned.">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1090" y="735" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MQVEfYuJuDoP7klM05_k-60" parent="1" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="50" width="10" x="600" y="660" as="geometry" />
+        </mxCell>
+        <mxCell id="MQVEfYuJuDoP7klM05_k-61" edge="1" parent="1" source="MQVEfYuJuDoP7klM05_k-25" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;entryX=0;entryY=0;entryDx=0;entryDy=5;" target="MQVEfYuJuDoP7klM05_k-60" value="9: Blocker hit, remove striking ball.">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="530" y="665" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MQVEfYuJuDoP7klM05_k-62" edge="1" parent="1" source="MQVEfYuJuDoP7klM05_k-60" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;curved=0;rounded=0;exitX=0;exitY=1;exitDx=0;exitDy=-5;" target="MQVEfYuJuDoP7klM05_k-25" value="10: Updated list of cannonballs returned.">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="530" y="735" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MQVEfYuJuDoP7klM05_k-63" parent="1" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;width=100;height=20;" value="alt: Miss Target" vertex="1">
+          <mxGeometry height="90" width="990" x="310" y="780" as="geometry" />
+        </mxCell>
+        <mxCell id="MQVEfYuJuDoP7klM05_k-64" parent="1" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="40" width="10" x="600" y="810" as="geometry" />
+        </mxCell>
+        <mxCell id="MQVEfYuJuDoP7klM05_k-65" edge="1" parent="1" source="MQVEfYuJuDoP7klM05_k-25" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;entryX=0;entryY=0;entryDx=0;entryDy=5;" target="MQVEfYuJuDoP7klM05_k-64" value="8: Cannonball out of bounds, remove from list.">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="530" y="815" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MQVEfYuJuDoP7klM05_k-66" edge="1" parent="1" source="MQVEfYuJuDoP7klM05_k-64" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;curved=0;rounded=0;exitX=0;exitY=1;exitDx=0;exitDy=-5;" target="MQVEfYuJuDoP7klM05_k-25" value="9: Updated list of cannon balls returned.">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="530" y="885" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
