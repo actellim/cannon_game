@@ -6,9 +6,9 @@ public class CollisionDetector {
     // Everything is about to be a square,
     // will fix in an iteration.
     // CannonBall and a Target or Blocker
-    public CollisionDetector(double h, double w) {
-        this.canvasHeight = h;
-        this.canvasWidth = w;
+    public CollisionDetector(double canvasWidth, double canvasHeight) {
+        this.canvasWidth = canvasWidth;
+        this.canvasHeight = canvasHeight;
     }
     
     public boolean checkCollision(GameObject o){

@@ -1,12 +1,22 @@
+import java.util.Random;
+
 public class Blocker extends GameObject{
 
+    private double speed;
     private double width;
     private double height;
 
-    public Blocker(double x, double y, double w, double h) {
+    public Blocker(double canvasWidth, double canvasHeight) {
         
-        this.width = w;
+        Random r = new Random();
+        double h = 120; // blocker height defined here for constructor maths
+        double w = 20;
+        double x = canvasWidth*9/20;
+        double y = r.nextDouble(canvasHeight/4, canvasHeight*3/4);
         this.height = h;
+        this.width = w;
+        double maxSpeed = 250;
+        this.speed = r.nextDouble(maxSpeed)-maxSpeed/2;
         // Pass x, y to super
         super(x, y);
     }
@@ -20,6 +30,10 @@ public class Blocker extends GameObject{
         height = h;
     }
 
+    public void setSpeed(double s){
+        speed = s;
+    }
+    
     // Getters
     public double getHeight(){
         return height;
@@ -27,6 +41,10 @@ public class Blocker extends GameObject{
     
     public double getWidth(){
         return width;
+    }
+
+    public double getSpeed(){
+        return speed;
     }
 /* 
         blocker = new Rectangle(20, 120);

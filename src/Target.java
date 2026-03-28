@@ -1,3 +1,5 @@
+import java.util.Random;
+
 public class Target extends GameObject{
 
     // Each target gets a different speed
@@ -5,11 +7,19 @@ public class Target extends GameObject{
     private double width;
     private double height;
 
-    public Target(double x, double y, double w, double h, double s) {
+    public Target(double targetNumber, double blockerSpeed, 
+                  double canvasWidth, double canvasHeight) {
         
-        this.width = w;
+        Random r = new Random();
+        double h = 60; // target height defined here for constructor maths
+        double w = 20;
+        double x = (targetNumber*40)+(canvasWidth/2);
+        double y = r.nextDouble(canvasHeight/4, canvasHeight*3/4);
         this.height = h;
-        this.speed = s;
+        this.width = w;
+        double maxSpeed = 500;
+        this.speed = r.nextDouble(blockerSpeed, maxSpeed)-
+            (blockerSpeed+(blockerSpeed+maxSpeed)/2);
         // Pass x, y to super
         super(x, y);
     }

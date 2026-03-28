@@ -25,7 +25,10 @@ public class Timer {
 	}
 	
 	public String toString(){
-		return(remaining.toString());		
+		// Type dance for clean display.
+		Integer remainingInt = (int) Math.round(remaining);
+		String remainingString = remainingInt.toString();
+		return(remainingString);
 	}
 
 	/* Tabula Rasa 

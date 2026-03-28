@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.Random;
 
 import javafx.animation.AnimationTimer;
 import javafx.fxml.FXML;
@@ -11,27 +10,30 @@ import javafx.scene.paint.Paint;
 public class GameController {
     // ref: https://openjfx.io/javadoc/23/javafx.graphics/javafx/scene/canvas/Canvas.html
     @FXML private Canvas gameCanvas;
-    Random r = new Random();
 
 
     // Due to the initial scaffolding a seperate
     // renderer class is beyond scope. :(
     public void initialize() {
         // Instantiate variables that refer to GUI components.
+        double canvasWidth = gameCanvas.getWidth();
+        double canvasHeight = gameCanvas.getHeight();
+        // Instantiate the blocker first so we can pass the speed.
+        Blocker blocker = new Blocker(canvasWidth, canvasHeight);
         // Create a List of targets.
         // ref: https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html
         ArrayList<Target> targets = new ArrayList<Target>();
         for (int i = 0; i < 9; i++){
             Target target = new Target(
-                500+(40*i), // x
-                r.nextDouble(gameCanvas.getHeight()-60),        // y
-                20,         // width
-                60,        // height
-                (r.nextDouble() - 0.5) * 500);        // speed
+                // proper SoC we can probably put most of this in the constructor
+                i, // blocker number
+                blocker.getSpeed(),
+                canvasWidth,
+                canvasHeight); //canvas height
             targets.add(target);
         }
         CollisionDetector collision = new CollisionDetector(
-            gameCanvas.getHeight(), gameCanvas.getWidth());
+            canvasHeight, canvasWidth);
         Timer t = new Timer();
 
         // Get the canvas graphics writer.
@@ -55,8 +57,15 @@ public class GameController {
                 previousTime = now;
                 // Update the game time.
                 t.removeTime(elapsedTime);
-                if (t.getTime() < 0)
+                if (t.getTime() < 0) {
                     // Do something? Need alerts and game state here.
+                }
+                
+                // Update the location of the blocker
+                if (collision.checkCollision(blocker))
+                    blocker.setSpeed(blocker.getSpeed()*-1);
+                blocker.setY(blocker.getY() - 
+                    (elapsedTime*blocker.getSpeed()));
 
                 // Update the location of the targets.
                 for (int i = 0; i < targets.size(); i++){
@@ -73,6 +82,11 @@ public class GameController {
                 gc.clearRect(0, 0, gameCanvas.getWidth(), 
                     gameCanvas.getHeight());
                 
+                // Draw the blocker
+                gc.setFill(Paint.valueOf("BLACK"));
+                gc.fillRect(blocker.getX(), blocker.getY(),
+                    blocker.getWidth(), blocker.getHeight());
+                
                 // Re-draw the targets.
                 gc.setFill(Paint.valueOf("ORANGE"));
                 for (int i = 0; i < targets.size(); i++){
@@ -81,13 +95,14 @@ public class GameController {
                         draw.getWidth(), draw.getHeight());
                 }
                 
-                // Update the timer.
+                // Render the time left.
                 gc.setFill(Paint.valueOf("BLACK"));
-                gc.fillText("Time Remaining: " + t.toString(), 10, 20);
+                if (t.getTime() > 0)
+                    gc.fillText("Time Remaining: " + t.toString(), 10, 20);
             }
         };
 
-    // Start rendering frames.
+    // Render frames.
     timer.start();
     }
 
