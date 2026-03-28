@@ -1,11 +1,48 @@
-import javafx.scene.shape.Rectangle;
-
 public class Target extends GameObject{
 
-    public Target(int[] xy) {
-        super(xy);
+    // Each target gets a different speed
+    private double speed;
+    private double width;
+    private double height;
+
+    public Target(double x, double y, double w, double h, double s) {
+        
+        this.width = w;
+        this.height = h;
+        this.speed = s;
+        // Pass x, y to super
+        super(x, y);
+    }
+    
+    // Setters
+    public void setWidth(double w){
+        width = w;
+    }
+    
+    public void setHeight(double h){
+        height = h;
     }
 
+    public void setSpeed(double s){
+        speed = s;
+    }
+    
+    // Getters
+    public double getHeight(){
+        return height;
+    }
+    
+    public double getWidth(){
+        return width;
+    }
+
+    public double getSpeed(){
+        return speed;
+    }
+    
+    
+
+        /* tabula rasa
         for (int i = 0; i < 9; i++) {
 
             Rectangle target = new Rectangle(20, 60);
@@ -20,5 +57,5 @@ public class Target extends GameObject{
             targets[i] = target;
 
             root.getChildren().add(target);
-        }
+        }*/
 }

@@ -1,17 +1,28 @@
-public class GameObject {
+public abstract class GameObject {
 
-    private int[] xyPos;
+    private double xPos;
+    private double yPos;
 
-    public GameObject(int[] xy){
-        this.xyPos = xy;
+    public GameObject(double x, double y){
+        this.xPos = x;
+        this.yPos = y;
     }
 
-    public int[] getPos() {
-        return xyPos;
+    public double getX() {
+        return xPos;
     }
 
-    public void setPos(int[] pos) {
-        this.xyPos = pos;
+    public double getY() {
+        return yPos;
+    }
+    
+    public abstract double getHeight();
+
+    public void setX(double x) {
+        this.xPos = x;
     }
 
+    public void setY(double y) {
+        this.yPos = y;
+    }
 }

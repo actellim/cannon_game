@@ -1,15 +1,97 @@
+import java.util.ArrayList;
+import java.util.Random;
+
 import javafx.animation.AnimationTimer;
-import javafx.animation.Timeline;
-import javafx.application.Application;
-import javafx.scene.Scene;
-import javafx.scene.layout.Pane;
-import javafx.scene.shape.Rectangle;
-import javafx.stage.Stage;
+import javafx.fxml.FXML;
+import javafx.scene.canvas.Canvas;
+import javafx.scene.canvas.GraphicsContext;
+import javafx.scene.paint.Paint;
 
-public class GameController extends Application {
 
-    private static final int WIDTH = 1000;
-    private static final int HEIGHT = 600;
+public class GameController {
+    // ref: https://openjfx.io/javadoc/23/javafx.graphics/javafx/scene/canvas/Canvas.html
+    @FXML private Canvas gameCanvas;
+    Random r = new Random();
+
+
+    // Due to the initial scaffolding a seperate
+    // renderer class is beyond scope. :(
+    public void initialize() {
+        // Instantiate variables that refer to GUI components.
+        // Create a List of targets.
+        // ref: https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html
+        ArrayList<Target> targets = new ArrayList<Target>();
+        for (int i = 0; i < 9; i++){
+            Target target = new Target(
+                500+(40*i), // x
+                r.nextDouble(gameCanvas.getHeight()-60),        // y
+                20,         // width
+                60,        // height
+                (r.nextDouble() - 0.5) * 500);        // speed
+            targets.add(target);
+        }
+        CollisionDetector collision = new CollisionDetector(
+            gameCanvas.getHeight(), gameCanvas.getWidth());
+        Timer t = new Timer();
+
+        // Get the canvas graphics writer.
+        // ref: https://openjfx.io/javadoc/23/javafx.graphics/javafx/scene/canvas/GraphicsContext.html
+        GraphicsContext gc = gameCanvas.getGraphicsContext2D();
+        
+
+        // Start an animation timer
+        // ref: https://openjfx.io/javadoc/24/javafx.graphics/javafx/animation/AnimationTimer.html
+        AnimationTimer timer = new AnimationTimer() {
+            // Init the previous time
+            long previousTime = System.nanoTime();
+
+
+            // Called every frame after timer.start() is called.
+            // All rendering happens INSIDE this method.
+            @Override
+            public void handle(long now) {
+                // Get the elapsed time in seconds.
+                double elapsedTime = (now - previousTime) / 1000000000.0;
+                previousTime = now;
+                // Update the game time.
+                t.removeTime(elapsedTime);
+                if (t.getTime() < 0)
+                    // Do something? Need alerts and game state here.
+
+                // Update the location of the targets.
+                for (int i = 0; i < targets.size(); i++){
+                    Target update = targets.get(i);
+                    // If targets collide, reverse them.
+                    if (collision.checkCollision(update))
+                        update.setSpeed(update.getSpeed()*-1);
+                    update.setY(update.getY()-
+                        (elapsedTime*update.getSpeed()));
+                    targets.set(i, update);
+                }
+                
+                // Clear the canvas.
+                gc.clearRect(0, 0, gameCanvas.getWidth(), 
+                    gameCanvas.getHeight());
+                
+                // Re-draw the targets.
+                gc.setFill(Paint.valueOf("ORANGE"));
+                for (int i = 0; i < targets.size(); i++){
+                    Target draw = targets.get(i);
+                    gc.fillRect(draw.getX(), draw.getY(), 
+                        draw.getWidth(), draw.getHeight());
+                }
+                
+                // Update the timer.
+                gc.setFill(Paint.valueOf("BLACK"));
+                gc.fillText("Time Remaining: " + t.toString(), 10, 20);
+            }
+        };
+
+    // Start rendering frames.
+    timer.start();
+    }
+
+    /* Tabula Rasa 
 
     private Rectangle[] targets = new Rectangle[9];
     private double[] speeds = new double[9];
@@ -73,9 +155,5 @@ public class GameController extends Application {
         timer.start();
 
         return new Scene(root, WIDTH, HEIGHT);
-    }
-
-    public static void main(String[] args) {
-        launch();
-    }
+    }*/
 }

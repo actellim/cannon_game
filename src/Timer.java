@@ -1,18 +1,38 @@
-import javafx.scene.text.Text;
+// import javafx.scene.text.Text;
 
 public class Timer {
+	
+	// Double for string conversion for display.
+	private Double remaining;
+
+	public Timer() {
+		this.remaining = 10.0;
+	}
+	
+	// Getter
+	public double getTime(){
+		return remaining;
+	}
+
+	// Increment
+	public void addTime(double t){
+		remaining = remaining + t;
+	}
+	
+	// Decrement
+	public void removeTime(double t){
+		remaining = remaining - t;
+	}
+	
+	public String toString(){
+		return(remaining.toString());		
+	}
+
+	/* Tabula Rasa 
 
         // 10-Second Countdown Variable
         int[] timeRemaining = {10};
         
-        // Display timer
-        Text timerCount = new Text();
-        timerCount.setText("Time Remaining: 10");
-        timerCount.setFont(Font.font("verdana", FontWeight.BOLD, FontPosture.REGULAR, 15));
-        timerCount.setX(10);
-        timerCount.setY(20);
-        
-        root.getChildren().add(timerCount);
         
         // Create 10-Second Timer        
         countdown = new Timeline(
@@ -39,4 +59,5 @@ public class Timer {
         // Run KeyFrame 10 times
         countdown.setCycleCount(10);
         countdown.play();
+		*/
 }

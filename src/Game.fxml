@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.layout.Pane?>
+
+<!--Reference:
+    private static final int WIDTH = 1000;
+    private static final int HEIGHT = 600;
+-->
+
+<Pane 
+    xmlns="http://javafx.com/javafx/8.0.60" 
+    xmlns:fx="http://javafx.com/fxml/1" 
+    fx:controller="GameController">
+    <children>
+        <Canvas 
+            fx:id="gameCanvas" 
+            width="1000.0" 
+            height="600.0" />
+    </children>
+</Pane>

@@ -1,13 +1,34 @@
 public class Blocker extends GameObject{
 
-    public Blocker(int[] xy) {
-        super(xy);
+    private double width;
+    private double height;
+
+    public Blocker(double x, double y, double w, double h) {
+        
+        this.width = w;
+        this.height = h;
+        // Pass x, y to super
+        super(x, y);
     }
     
-    @Override
-    public void setPos(int[] pos) {
-        System.err.println("Can't change cannon pos");
+    // Setters
+    public void setWidth(double w){
+        width = w;
     }
+    
+    public void setHeight(double h){
+        height = h;
+    }
+
+    // Getters
+    public double getHeight(){
+        return height;
+    }
+    
+    public double getWidth(){
+        return width;
+    }
+/* 
         blocker = new Rectangle(20, 120);
 
         blocker.setX(400);
@@ -16,4 +37,5 @@ public class Blocker extends GameObject{
         blockerSpeed = 2.5;
 
         root.getChildren().add(blocker);
+*/
 }
