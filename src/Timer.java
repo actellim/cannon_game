@@ -1,12 +1,17 @@
-// import javafx.scene.text.Text;
+import javafx.scene.canvas.GraphicsContext;
+import javafx.scene.paint.Paint;
 
-public class Timer {
+public class Timer extends GameObject{
 	
 	// Double for string conversion for display.
 	private Double remaining;
+	private long previousTime;
 
 	public Timer() {
 		this.remaining = 10.0;
+		int x = 10;
+		int y = 20; // hardcode timer pos.
+		super(x, y);
 	}
 	
 	// Getter
@@ -29,6 +34,21 @@ public class Timer {
 		Integer remainingInt = (int) Math.round(remaining);
 		String remainingString = remainingInt.toString();
 		return(remainingString);
+	}
+	
+	public void handle(long now){
+		double elapsedTime = getElapsed(now);
+		// Update the game time.
+		removeTime(elapsedTime);
+
+	}
+	
+	public void render(GraphicsContext gc){
+		// Draw the time left.
+		gc.setFill(Paint.valueOf("BLACK"));
+		if (getTime() > 0) {
+			gc.fillText("Time Remaining: " + toString(), getX(), getY());
+		}
 	}
 
 	/* Tabula Rasa 

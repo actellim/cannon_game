@@ -1,56 +1,37 @@
 import java.util.Random;
 
-public class Target extends GameObject{
+import javafx.scene.canvas.GraphicsContext;
+import javafx.scene.paint.Paint;
 
-    // Each target gets a different speed
-    private double speed;
-    private double width;
-    private double height;
+public class Target extends PotentialTarget{
 
     public Target(double targetNumber, double blockerSpeed, 
                   double canvasWidth, double canvasHeight) {
         
         Random r = new Random();
-        double h = 60; // target height defined here for constructor maths
-        double w = 20;
+        double height = 60; 
         double x = (targetNumber*40)+(canvasWidth/2);
-        double y = r.nextDouble(canvasHeight/4, canvasHeight*3/4);
-        this.height = h;
-        this.width = w;
         double maxSpeed = 500;
-        this.speed = r.nextDouble(blockerSpeed, maxSpeed)-
+        double speed = r.nextDouble(blockerSpeed, maxSpeed)-
             (blockerSpeed+(blockerSpeed+maxSpeed)/2);
         // Pass x, y to super
-        super(x, y);
+        super(x, canvasWidth, canvasHeight, speed, height);
     }
     
-    // Setters
-    public void setWidth(double w){
-        width = w;
-    }
-    
-    public void setHeight(double h){
-        height = h;
+    @Override
+    public void render(GraphicsContext gc){
+        gc.setFill(Paint.valueOf("ORANGE"));
+        gc.fillRect(getX(), getY(), getWidth(), getHeight());
     }
 
-    public void setSpeed(double s){
-        speed = s;
+    // Update logical position every frame.
+    @Override
+    public void handle(long now){
+        if (checkCollision()){
+            setSpeed(getSpeed()*-1);
+        }
+        setY(getY()-(getElapsed(now)*getSpeed()));
     }
-    
-    // Getters
-    public double getHeight(){
-        return height;
-    }
-    
-    public double getWidth(){
-        return width;
-    }
-
-    public double getSpeed(){
-        return speed;
-    }
-    
-    
 
         /* tabula rasa
         for (int i = 0; i < 9; i++) {

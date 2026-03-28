@@ -11,10 +11,12 @@ public class CollisionDetector {
         this.canvasHeight = canvasHeight;
     }
     
-    public boolean checkCollision(GameObject o){
+    /* Moved inside of PotentialTarget
+    public boolean checkCollision(PotentialTarget t){
         boolean val = false;
-        if (o.getY() < 0 || o.getY() + o.getHeight() > canvasHeight)
+        if (t.getY() < 0 || t.getY() + t.getHeight() > canvasHeight)
             val = true;
         return val;
     }
+    */
 }

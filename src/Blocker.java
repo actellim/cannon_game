@@ -1,51 +1,35 @@
 import java.util.Random;
 
-public class Blocker extends GameObject{
+import javafx.scene.canvas.GraphicsContext;
+import javafx.scene.paint.Paint;
 
-    private double speed;
-    private double width;
-    private double height;
+public class Blocker extends PotentialTarget{
 
     public Blocker(double canvasWidth, double canvasHeight) {
         
         Random r = new Random();
-        double h = 120; // blocker height defined here for constructor maths
-        double w = 20;
+        double height = 120; 
         double x = canvasWidth*9/20;
-        double y = r.nextDouble(canvasHeight/4, canvasHeight*3/4);
-        this.height = h;
-        this.width = w;
         double maxSpeed = 250;
-        this.speed = r.nextDouble(maxSpeed)-maxSpeed/2;
-        // Pass x, y to super
-        super(x, y);
-    }
-    
-    // Setters
-    public void setWidth(double w){
-        width = w;
-    }
-    
-    public void setHeight(double h){
-        height = h;
+        double speed = r.nextDouble(maxSpeed)-maxSpeed/2;
+        super(x, canvasWidth, canvasHeight, speed, height);
     }
 
-    public void setSpeed(double s){
-        speed = s;
-    }
-    
-    // Getters
-    public double getHeight(){
-        return height;
-    }
-    
-    public double getWidth(){
-        return width;
+    @Override
+    public void render(GraphicsContext gc){
+        gc.setFill(Paint.valueOf("BLACK"));
+        gc.fillRect(getX(), getY(), getWidth(), getHeight());
     }
 
-    public double getSpeed(){
-        return speed;
+    @Override
+    public void handle(long now){
+        if (checkCollision()){
+            setSpeed(getSpeed()*-1);
+        }
+        // Update logical position every frame.
+        setY(getY()-(getElapsed(now)*getSpeed()));
     }
+    
 /* 
         blocker = new Rectangle(20, 120);
 
