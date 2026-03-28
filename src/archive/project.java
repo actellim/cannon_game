@@ -1,3 +1,4 @@
+package archive;
 import javafx.animation.AnimationTimer;
 import javafx.animation.Timeline;
 import javafx.animation.KeyFrame;
