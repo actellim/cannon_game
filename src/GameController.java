@@ -99,6 +99,6 @@ public class GameController implements GameListener{
     private void canvasMouseClicked(MouseEvent e){
         double mouseX = e.getX();
         double mouseY = e.getY();
-        cannon.aimCannon(mouseX, mouseY);
+        cannon.calcNewTheta(mouseX, mouseY);
     }
 }
