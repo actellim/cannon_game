@@ -44,13 +44,23 @@ public abstract class PotentialTarget extends GameObject{
         return speed;
     }
     
-    // Collision Detection
-    public boolean checkCollision(){
-        boolean val = false;
-        if (getY() < 0 || getY() + getHeight() > canvasHeight){
-            val = true;
+    // Collision Detection needs to be handled for each case
+    // to deal with time desync.
+    public void checkCollision(){
+        // Top boundary.
+        if (this.getY() <= 0){
+            this.setY(0);
+            // Stop the jitter!
+            if (this.getSpeed() > 0){
+                this.setSpeed(this.getSpeed()*-1);
+            }
+        } 
+        // Bottom Boundary
+        if (getY() + getHeight() >= canvasHeight){
+            this.setY(canvasHeight-this.getHeight());
+            if (this.getSpeed() < 0){
+                this.setSpeed(this.getSpeed()*-1);
+            }
         }
-        return val;
     }
-    
 }

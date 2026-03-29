@@ -4,33 +4,36 @@ import javafx.scene.shape.ArcType;
 
 public class Cannon extends GameObject{
     private double[] barrelX, barrelY;
-    private double currentTheta;
-    private double nextTheta;
+    private double currentTheta, nextTheta, tipX, tipY, 
+        barrelLength, barrelWidth, barrelVelocity;
+    private GameListener listener;
+    private boolean cannonFired;
 
-    public Cannon(double canvasHeight) {
+    public Cannon(double canvasHeight, GameListener listener) {
         double y = canvasHeight/2;
         double x = 0;
-        this.barrelX = new double[]{0, 0, 120, 120};
-        this.barrelY = new double[]{y-10, y+10, y+10, y-10};
+        double barrelLength = 100;
+        double barrelWidth = 30;
+        this.barrelLength = barrelLength;
+        this.barrelWidth = barrelWidth;
+        this.barrelVelocity = Math.PI * 2;     // radians/s.
+        this.tipX = barrelLength;
+        this.tipY = y;
+        this.barrelX = new double[]{0, 0, barrelLength, barrelLength};
+        this.barrelY = new double[]{y-(barrelWidth/2), y+(barrelWidth/2), 
+            y+(barrelWidth/2), y-(barrelWidth/2)};
         this.currentTheta = 0;
         this.nextTheta = 0;
+        // State variable
+        this.cannonFired = true;
+        this.listener = listener;
         super(x, y);
     }
     
     
-    public void render(GraphicsContext gc){
-        
-        // Draw the barrel
-        gc.setFill(Paint.valueOf("GREY"));
-        gc.fillPolygon(barrelX, barrelY, 4);
-        // Draw the base
-        gc.setFill(Paint.valueOf("BROWN"));
-        // Magic numbers because it doesn't move.
-        gc.fillArc(getX()-30, getY()-30, 60.0, 60.0, 90, -180.0, ArcType.valueOf("OPEN"));
-    }
-
     public void calcNewTheta(double x, double y){
 
+        this.cannonFired = false;
         // Draw a line from the base of the cannon
         // to the location of the mouse click.
         double a = getX();
@@ -43,28 +46,28 @@ public class Cannon extends GameObject{
         double a = getX();
         double b = getY();
         // Add base coords for relative positioning.
-        double alpha = a + 120*Math.cos(theta);       // a + 120*cos(theta)
-        double beta = b + 120*Math.sin(theta);        // b + 120*sin(theta)
+        this.tipX = a + this.barrelLength*Math.cos(theta);       // a + 120*cos(theta)
+        this.tipY = b + this.barrelLength*Math.sin(theta);        // b + 120*sin(theta)
         double phi = Math.PI/2 - theta;         // 90 - theta
         // This gets me a line from the base of the cannon
         // to the middle of the end of the cannon.
         // Still need to offset.
         // c = a - 10*cos(phi)
-        double c = a - 10*Math.cos(phi);
+        double c = a - this.barrelWidth/2*Math.cos(phi);
         // d = b + 10*sin(phi)
-        double d = b + 10*Math.sin(phi);
+        double d = b + this.barrelWidth/2*Math.sin(phi);
         // e = a + 10*cos(phi)
-        double e = a + 10*Math.cos(phi);
+        double e = a + this.barrelWidth/2*Math.cos(phi);
         // f = b - 10*sin(phi)
-        double f = b - 10*Math.sin(phi);
+        double f = b - this.barrelWidth/2*Math.sin(phi);
         // g = alpha - 10*cos(phi)
-        double g = alpha - 10*Math.cos(phi);
+        double g = this.tipX - this.barrelWidth/2*Math.cos(phi);
         // h = beta + 10*sin(phi)
-        double h = beta + 10*Math.sin(phi);
+        double h = this.tipY + this.barrelWidth/2*Math.sin(phi);
         // i = alpha + 10*cos(phi)
-        double i = alpha + 10*Math.cos(phi);
+        double i = this.tipX + this.barrelWidth/2*Math.cos(phi);
         // j = beta - 10*sin(phi)
-        double j = beta - 10*Math.sin(phi);
+        double j = this.tipY - this.barrelWidth/2*Math.sin(phi);
         // Points: (c, d), (e, f), (i, j), (g, h)
         // barrelX: [c, e, i, g] 
         barrelX[0] = c;
@@ -77,12 +80,24 @@ public class Cannon extends GameObject{
         barrelY[2] = j;
         barrelY[3] = h;
     }
+    
 
+    public void render(GraphicsContext gc){
+        
+        // Draw the barrel
+        gc.setFill(Paint.valueOf("GREY"));
+        gc.fillPolygon(barrelX, barrelY, 4);
+        // Draw the base
+        gc.setFill(Paint.valueOf("BROWN"));
+        // Magic numbers because it doesn't move.
+        gc.fillArc(getX()-30, getY()-30, 60.0, 60.0, 90, -180.0, ArcType.valueOf("OPEN"));
+    }
+
+
+    @Override
     public void handle(long now){
         
         // pass the new angle to update the cannon position
-        // Barrel Velocity in degrees/s.
-        double barrelVelocity = Math.PI/4;                                 
         // Calc the degrees to rotate.
         double adjustThetaBy = getElapsed(now) * barrelVelocity;  
         if (currentTheta > nextTheta){
@@ -97,8 +112,10 @@ public class Cannon extends GameObject{
                 currentTheta = nextTheta;
         }
         updateBarrelPoints(currentTheta);
-        if (currentTheta == nextTheta){
+        if (currentTheta == nextTheta && cannonFired == false){
             // fire the cannon!
+            listener.fireCannon(this.tipX, this.tipY, this.barrelWidth, this.currentTheta);
+            this.cannonFired = true;
         }
     }
 }

@@ -15,6 +15,7 @@ public class GameController implements GameListener{
     private Cannon cannon;
     private ArrayList<Target> targets;
     private ArrayList<PotentialTarget> blockerAndTargets;
+    private ArrayList<CannonBall> cannonBalls;
     private ArrayList<GameObject> gameObjects;
     private Renderer r;
     private double canvasWidth, canvasHeight, blockerSpeed;
@@ -27,6 +28,7 @@ public class GameController implements GameListener{
         canvasHeight = gameCanvas.getHeight();
         targets = new ArrayList<Target>();
         blockerAndTargets = new ArrayList<PotentialTarget>();
+        cannonBalls = new ArrayList<CannonBall>();
         gameObjects = new ArrayList<GameObject>();
         // Instantiate the blocker first so we can pass the speed.
         blocker = new Blocker(canvasWidth, canvasHeight);
@@ -49,7 +51,7 @@ public class GameController implements GameListener{
         }
         t = new Timer(this); // Initial duration hardcoded to 10s.
         gameObjects.add(t);
-        cannon = new Cannon(canvasHeight);
+        cannon = new Cannon(canvasHeight, this);
         gameObjects.add(cannon);
         // Get the canvas graphics writer.
         // ref: https://openjfx.io/javadoc/23/javafx.graphics/javafx/scene/canvas/GraphicsContext.html
@@ -93,6 +95,15 @@ public class GameController implements GameListener{
                 initialize();
             }
         });
+    }
+    
+
+    @Override
+    public void fireCannon(double x, double y, double size, double theta){
+        CannonBall cannonBall = new CannonBall(x, y, size, theta);
+        cannonBalls.add(cannonBall);
+        gameObjects.add(cannonBall);
+        cannonBall.start();
     }
     
     @FXML

@@ -11,7 +11,7 @@ public class Target extends PotentialTarget{
         Random r = new Random();
         double height = 60; 
         double x = (targetNumber*40)+(canvasWidth/2);
-        double maxSpeed = 500;
+        double maxSpeed = 400;
         double speed = r.nextDouble(blockerSpeed, maxSpeed)-
             (blockerSpeed+(blockerSpeed+maxSpeed)/2);
         // Pass x, y to super
@@ -27,9 +27,8 @@ public class Target extends PotentialTarget{
     // Update logical position every frame.
     @Override
     public void handle(long now){
-        if (checkCollision()){
-            setSpeed(getSpeed()*-1);
-        }
-        setY(getY()-(getElapsed(now)*getSpeed()));
+        double dy = this.getElapsed(now) * this.getSpeed();
+        this.checkCollision();
+        setY(getY()-dy);
     }
 }

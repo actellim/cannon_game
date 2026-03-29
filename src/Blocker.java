@@ -10,7 +10,7 @@ public class Blocker extends PotentialTarget{
         Random r = new Random();
         double height = 120; 
         double x = canvasWidth*9/20;
-        double maxSpeed = 250;
+        double maxSpeed = 200;
         double speed = r.nextDouble(maxSpeed)-maxSpeed/2;
         super(x, canvasWidth, canvasHeight, speed, height);
     }
@@ -23,21 +23,9 @@ public class Blocker extends PotentialTarget{
 
     @Override
     public void handle(long now){
-        if (checkCollision()){
-            setSpeed(getSpeed()*-1);
-        }
+        double dy = this.getElapsed(now) * this.getSpeed();
+        this.checkCollision();
         // Update logical position every frame.
-        setY(getY()-(getElapsed(now)*getSpeed()));
+        setY(getY()-dy);
     }
-    
-/* 
-        blocker = new Rectangle(20, 120);
-
-        blocker.setX(400);
-        blocker.setY(rand.nextInt(HEIGHT - 150));
-
-        blockerSpeed = 2.5;
-
-        root.getChildren().add(blocker);
-*/
 }
