@@ -5,12 +5,13 @@ public class Timer extends GameObject{
 	
 	// Double for string conversion for display.
 	private Double remaining;
-	private long previousTime;
+	private GameListener listener;
 
-	public Timer() {
-		this.remaining = 10.0;
+	public Timer(GameListener listener) {
 		int x = 10;
 		int y = 20; // hardcode timer pos.
+		this.remaining = 10.0;
+		this.listener = listener;
 		super(x, y);
 	}
 	
@@ -38,9 +39,13 @@ public class Timer extends GameObject{
 	
 	public void handle(long now){
 		double elapsedTime = getElapsed(now);
-		// Update the game time.
+		// Update the remaining time.
 		removeTime(elapsedTime);
-
+		
+		// Check for game over.
+		if (getTime() < 0){
+			listener.gameOver();
+		}
 	}
 	
 	public void render(GraphicsContext gc){
