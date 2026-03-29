@@ -1,7 +1,23 @@
+import java.util.Optional;
+
 import javafx.scene.control.Alert;
+import javafx.scene.control.ButtonType;
 
 // ref: https://openjfx.io/javadoc/17/javafx.controls/javafx/scene/control/Alert.html
 public class SelectScreen extends Alert{
+
+    public SelectScreen(){
+        // Aesthetically this needs to be improved.
+        super(AlertType.CONFIRMATION, "Wanna play a game?");
+    }
+    
+    public boolean promptUser(){
+        Optional<ButtonType> result = showAndWait();
+        if (result.isPresent() && result.get() == ButtonType.OK)
+            return true;
+        else
+            return false;
+    }
 
 /* Tabula Rasa
 /// Game Over Scene ----------------------------------------------------------------------

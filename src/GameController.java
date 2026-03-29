@@ -1,13 +1,10 @@
 import java.util.ArrayList;
-import java.util.Optional;
 
 import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Alert.AlertType;
-import javafx.scene.control.ButtonType;
+import javafx.scene.input.MouseEvent;
 
 public class GameController implements GameListener{
     // ref: https://openjfx.io/javadoc/24/javafx.graphics/javafx/animation/AnimationTimer.html
@@ -15,12 +12,14 @@ public class GameController implements GameListener{
     @FXML private Canvas gameCanvas;
     private GraphicsContext gc;
     private Blocker blocker;
+    private Cannon cannon;
     private ArrayList<Target> targets;
     private ArrayList<PotentialTarget> blockerAndTargets;
     private ArrayList<GameObject> gameObjects;
     private Renderer r;
     private double canvasWidth, canvasHeight, blockerSpeed;
     private Timer t;
+    private SelectScreen popup;
 
     public void initialize() {
         // Instantiate variables fresh for every game.
@@ -50,6 +49,8 @@ public class GameController implements GameListener{
         }
         t = new Timer(this); // Initial duration hardcoded to 10s.
         gameObjects.add(t);
+        cannon = new Cannon(canvasHeight);
+        gameObjects.add(cannon);
         // Get the canvas graphics writer.
         // ref: https://openjfx.io/javadoc/23/javafx.graphics/javafx/scene/canvas/GraphicsContext.html
         gc = gameCanvas.getGraphicsContext2D();
@@ -57,9 +58,8 @@ public class GameController implements GameListener{
         r = new Renderer(gc, gameObjects, canvasWidth, canvasHeight);
  
         // ref: https://openjfx.io/javadoc/17/javafx.controls/javafx/scene/control/Alert.html
-        Alert gameStart = new Alert(AlertType.CONFIRMATION, "Wanna play a game?");
-        Optional<ButtonType> result = gameStart.showAndWait();
-        if (result.isPresent() && result.get() == ButtonType.OK){ 
+        popup = new SelectScreen();
+        if (popup.promptUser()){ 
             // Start the handle(long now) method of the GameObjects.
             for (GameObject gameObject : gameObjects){
                 gameObject.start(); // non-blocking!
@@ -93,5 +93,12 @@ public class GameController implements GameListener{
                 initialize();
             }
         });
+    }
+    
+    @FXML
+    private void canvasMouseClicked(MouseEvent e){
+        double mouseX = e.getX();
+        double mouseY = e.getY();
+        cannon.aimCannon(mouseX, mouseY);
     }
 }

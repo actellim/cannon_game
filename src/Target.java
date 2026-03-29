@@ -32,21 +32,4 @@ public class Target extends PotentialTarget{
         }
         setY(getY()-(getElapsed(now)*getSpeed()));
     }
-
-        /* tabula rasa
-        for (int i = 0; i < 9; i++) {
-
-            Rectangle target = new Rectangle(20, 60);
-
-            target.setX(500 + (i * 40));
-            target.setY(rand.nextInt(HEIGHT - 60));
-            target.setFill(Color.ORANGE); 
-
-            // Each target gets a different speed
-            speeds[i] = 1 + rand.nextDouble() * 3;
-
-            targets[i] = target;
-
-            root.getChildren().add(target);
-        }*/
 }
