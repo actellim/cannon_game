@@ -1,6 +1,6 @@
 public interface GameListener {
     
-    public abstract void gameOver();
+    public abstract void gameOver(boolean gameWon);
     public abstract void fireCannon(double x, double y, double size, double theta);
     public abstract void addTime(double t);
     public abstract void removeTime(double t);

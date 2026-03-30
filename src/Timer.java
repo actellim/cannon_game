@@ -4,25 +4,32 @@ import javafx.scene.paint.Paint;
 public class Timer extends GameObject{
 	
 	// Double for string conversion for display.
-	private Double remaining;
+	private Double remaining, totalTime;
 	private GameListener listener;
 
 	public Timer(GameListener listener) {
 		int x = 10;
 		int y = 20; // hardcode timer pos.
-		this.remaining = 10.0;
+		double timeLimit = 10;
+		this.remaining = timeLimit;
+		this.totalTime = timeLimit;
 		this.listener = listener;
 		super(x, y);
 	}
 	
 	// Getter
-	public double getTime(){
+	public Double getTime(){
 		return remaining;
+	}
+	
+	public Double getTotalTime(){
+		return totalTime;
 	}
 
 	// Increment
 	public void addTime(double t){
 		remaining = remaining + t;
+		totalTime = totalTime + t;
 	}
 	
 	// Decrement
@@ -44,7 +51,7 @@ public class Timer extends GameObject{
 		
 		// Check for game over.
 		if (getTime() < 0){
-			listener.gameOver();
+			listener.gameOver(false);
 		}
 	}
 	

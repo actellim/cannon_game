@@ -68,10 +68,17 @@ public class CollisionDetector extends AnimationTimer{
     // Realizing right about now that boucing the ball off the wall 
     // would have been a lot easier.
     public boolean checkCollision(CannonBall cannonBall){
-        double cannonBallRight = cannonBall.getX() + cannonBall.getSize();
+        double cannonBallLeft = cannonBall.getX();
+        double cannonBallRight = cannonBallLeft + cannonBall.getSize();
         double cannonBallTop = cannonBall.getY();
         double cannonBallBottom = cannonBallTop + cannonBall.getSize();
-        if (cannonBallTop < 0 || cannonBallRight > canvasWidth || cannonBallBottom > canvasHeight){
+        // Potentially need to add direction checking here to prevent jitter
+        if (cannonBallTop < 0 || cannonBallBottom > canvasHeight){
+            cannonBall.setSpeedY(cannonBall.getSpeedY() * -1);
+            return false;
+        }
+        else if (cannonBallLeft < 0 || cannonBallRight > canvasWidth){
+
             return true;
         }
         else
@@ -103,7 +110,7 @@ public class CollisionDetector extends AnimationTimer{
                         listener.removeGameObject(ball);
                         listener.removeGameObject(target);
                         if(targets.isEmpty()){
-                            listener.gameOver();
+                            listener.gameOver(true);
                         }
                         break;
                     }
@@ -111,7 +118,7 @@ public class CollisionDetector extends AnimationTimer{
                 // ...and the blocker!
                 if(checkCollision(ball, blocker)){
                     listener.playBlockerHit();
-                    listener.removeGameObject(ball);
+                    ball.setSpeedX(ball.getSpeedX() * -1);
                     listener.removeTime(3);
                 }
             }

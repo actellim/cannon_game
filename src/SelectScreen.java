@@ -20,10 +20,21 @@ public class SelectScreen extends Alert{
     }
     
     // Game Over
-    public SelectScreen(Integer finalScore){
+    // SelectScreen(score, timer.getTotalTime(), shotsFired, gameWon);
+    public SelectScreen(Integer finalScore, Double totalTime, Integer shotsFired, boolean gameWon){
         super(AlertType.CONFIRMATION);
         this.setTitle("Game Over");
-        this.setHeaderText("Final Score:" + finalScore.toString());
+        String headerText;
+        if (gameWon){
+            headerText = new String("You win!\n");
+        }
+        else{
+            headerText = new String("You lose.\n");
+        }
+        headerText = headerText + "Final Score: " + finalScore.toString() 
+        + "\nShots Fired: " + shotsFired.toString() + "\nSeconds Taken: " 
+        + totalTime.intValue();
+        this.setHeaderText(headerText);
         this.setContentText("Play Again?");
 
         ButtonType buttonYes = new ButtonType("Yes", ButtonData.YES);

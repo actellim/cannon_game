@@ -20,7 +20,7 @@ public class GameController implements GameListener{
     private ArrayList<GameObject> gameObjects;
     private Renderer renderer;
     private double canvasWidth, canvasHeight, blockerSpeed;
-    private Integer score;
+    private Integer score, shotsFired;
     private Timer timer;
     private CollisionDetector collisionDetector;
     private SelectScreen popup;
@@ -56,7 +56,8 @@ public class GameController implements GameListener{
         soundManager = new SoundManager();
         collisionDetector = new CollisionDetector(canvasWidth, canvasHeight, cannonBalls, targets, blocker, this);
         timer = new Timer(this); // Initial duration hardcoded to 10s.
-        score = new Integer(0);
+        score = 0;
+        shotsFired = 0;
         gameObjects.add(timer);
         cannon = new Cannon(canvasHeight, this);
         gameObjects.add(cannon);
@@ -90,13 +91,13 @@ public class GameController implements GameListener{
     // Interface method for score tracking
     @Override
     public void increaseScore(){
-        this.score = this.score + (int)timer.getTime();
+        this.score = this.score + timer.getTime().intValue();
     }
  
     
     // Interface necessary to access game over method.
     @Override
-    public void gameOver(){
+    public void gameOver(boolean gameWon){
         // Stop the presses -- they're out of time!
         for (GameObject gameObject : gameObjects){
             gameObject.stop();
@@ -109,7 +110,7 @@ public class GameController implements GameListener{
         Platform.runLater(new Runnable() {
             @Override 
             public void run() {
-                SelectScreen gameOver = new SelectScreen(score);
+                SelectScreen gameOver = new SelectScreen(score, timer.getTotalTime(), shotsFired, gameWon);
                 if(!gameOver.promptUser())
                     Platform.exit();
                 else
@@ -170,6 +171,7 @@ public class GameController implements GameListener{
         gameObjects.add(cannonBall);
         soundManager.cannonFire();
         cannonBall.start();
+        this.shotsFired++;
     }
 
 //--Handle mouse clicks--------------------------|    
