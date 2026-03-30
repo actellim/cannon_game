@@ -2,71 +2,40 @@ import java.util.Optional;
 
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
+import javafx.scene.control.ButtonBar.ButtonData;
 
 // ref: https://openjfx.io/javadoc/17/javafx.controls/javafx/scene/control/Alert.html
 public class SelectScreen extends Alert{
 
+    // Start Game
     public SelectScreen(){
-        // Aesthetically this needs to be improved.
-        super(AlertType.CONFIRMATION, "Wanna play a game?");
+        super(AlertType.CONFIRMATION);
+        this.setTitle("Cannon Game Startup");
+        this.setHeaderText("Why hello there!");
+        this.setContentText("Wanna play a game?");
+
+        ButtonType buttonYes = new ButtonType("Yes!", ButtonData.YES);
+        ButtonType buttonNo = new ButtonType("Absolutely Not.", ButtonData.NO);
+        this.getButtonTypes().setAll(buttonYes, buttonNo);
+    }
+    
+    // Game Over
+    public SelectScreen(Integer finalScore){
+        super(AlertType.CONFIRMATION);
+        this.setTitle("Game Over");
+        this.setHeaderText("Final Score:" + finalScore.toString());
+        this.setContentText("Play Again?");
+
+        ButtonType buttonYes = new ButtonType("Yes", ButtonData.YES);
+        ButtonType buttonNo = new ButtonType("No", ButtonData.NO);
+        this.getButtonTypes().setAll(buttonYes, buttonNo);
     }
     
     public boolean promptUser(){
         Optional<ButtonType> result = showAndWait();
-        if (result.isPresent() && result.get() == ButtonType.OK)
+        if (result.isPresent() && result.get().getButtonData() == ButtonData.YES)
             return true;
         else
             return false;
     }
-
-/* Tabula Rasa
-/// Game Over Scene ----------------------------------------------------------------------
-    private Scene GameOverScene(Stage stage) {
-    	
-        VBox root = new VBox(20); 
-        
-        root.setStyle("-fx-background-color: dimgrey;");
-        root.setAlignment(Pos.CENTER);
-        
-        Text gameOver = new Text("GAME OVER");
-        gameOver.setFill(Color.WHITE);
-        gameOver.setFont(Font.font("verdana", FontWeight.BOLD, FontPosture.REGULAR, 45));
-        
-        root.getChildren().add(gameOver);
-        
-// Retry Button -------------------------------------------------------
-        Button retryButton = new Button();
-        retryButton.setText("Play Again?");
-        
-        retryButton.setPrefWidth(150);
-        
-        retryButton.setOnAction(new EventHandler<ActionEvent>() {
-
-        	        @Override
-        	        public void handle(ActionEvent event) {
-
-        	            stage.setScene(GameScene(stage));
-        	        }
-        	    }
-        	);
-        
-        root.getChildren().add(retryButton);
-        
-// Close Game (Exist) Button -----------------------------------------
-        Button exitButton = new Button("Exit");
-        
-        exitButton.setPrefWidth(150);
-
-        exitButton.setOnAction(new EventHandler<ActionEvent>() {
-
-                @Override
-                public void handle(ActionEvent event) {
-
-                    stage.close();
-                }
-            }
-        );
-        
-        root.getChildren().add(exitButton);
-    } */
 }

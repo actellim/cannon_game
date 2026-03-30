@@ -44,8 +44,8 @@ public abstract class PotentialTarget extends GameObject{
         return speed;
     }
     
-    // Collision Detection needs to be handled for each case
-    // to deal with time desync.
+    // Collision Detection needs to be handled for both cases
+    // to deal with time desync jitter bug.
     public void checkCollision(){
         // Top boundary.
         if (this.getY() <= 0){

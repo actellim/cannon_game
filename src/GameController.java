@@ -20,9 +20,11 @@ public class GameController implements GameListener{
     private ArrayList<GameObject> gameObjects;
     private Renderer renderer;
     private double canvasWidth, canvasHeight, blockerSpeed;
+    private Integer score;
     private Timer timer;
     private CollisionDetector collisionDetector;
     private SelectScreen popup;
+    private boolean firstRun = true;
 
     public void initialize() {
         // Instantiate variables fresh for every game.
@@ -54,6 +56,7 @@ public class GameController implements GameListener{
         soundManager = new SoundManager();
         collisionDetector = new CollisionDetector(canvasWidth, canvasHeight, cannonBalls, targets, blocker, this);
         timer = new Timer(this); // Initial duration hardcoded to 10s.
+        score = new Integer(0);
         gameObjects.add(timer);
         cannon = new Cannon(canvasHeight, this);
         gameObjects.add(cannon);
@@ -64,22 +67,30 @@ public class GameController implements GameListener{
         renderer = new Renderer(gc, gameObjects, canvasWidth, canvasHeight);
  
         // ref: https://openjfx.io/javadoc/17/javafx.controls/javafx/scene/control/Alert.html
-        popup = new SelectScreen();
-        if (popup.promptUser()){ 
-            // Start the handle(long now) method of the GameObjects.
-            for (GameObject gameObject : gameObjects){
-                gameObject.start(); // non-blocking!
+        if (firstRun){
+            firstRun = false;
+            popup = new SelectScreen();
+            if (!popup.promptUser()){ 
+                // Exit gracefully -- need to use Platform.exit() here to avoid
+                // potential memory leaks.
+                // https://openjfx.io/javadoc/17/javafx.graphics/javafx/application/Platform.html
+                Platform.exit();
             }
-            // Start rendering the objects. **Happens in another thread, non-blocking.**
-            renderer.start();
-            collisionDetector.start();
         }
-        else
-            // Exit gracefully -- need to use Platform.exit() here to avoid
-            // potential memory leaks.
-            // https://openjfx.io/javadoc/17/javafx.graphics/javafx/application/Platform.html
-            Platform.exit();
- 
+        // Start the handle(long now) method of the GameObjects.
+        for (GameObject gameObject : gameObjects){
+            gameObject.start(); // non-blocking!
+        }
+        // Start rendering the objects. **Happens in another thread, non-blocking.**
+        renderer.start();
+        collisionDetector.start();
+    }
+    
+
+    // Interface method for score tracking
+    @Override
+    public void increaseScore(){
+        this.score++;
     }
  
     
@@ -98,13 +109,18 @@ public class GameController implements GameListener{
         Platform.runLater(new Runnable() {
             @Override 
             public void run() {
-                initialize();
+                SelectScreen gameOver = new SelectScreen(score);
+                if(!gameOver.promptUser())
+                    Platform.exit();
+                else
+                    initialize();
             }
         });
     }
 
     
     @Override
+    // Method to remove generic objects from the lists of objects.
     public void removeGameObject(GameObject o){
         o.stop();
         gameObjects.remove(o);
@@ -117,7 +133,7 @@ public class GameController implements GameListener{
         }
     }
     
-
+//--Sound Section----------------|
     @Override
     public void playTargetHit(){
         soundManager.targetHit();
@@ -134,7 +150,7 @@ public class GameController implements GameListener{
         soundManager.wallHit();
     }
 
-
+//--Timer Management-------------|
     @Override
     public void addTime(double t){
         timer.addTime(t);
@@ -146,7 +162,7 @@ public class GameController implements GameListener{
         timer.removeTime(t);
     }
     
-
+//--Implement the interface method for cannon firing---------------------|
     @Override
     public void fireCannon(double x, double y, double size, double theta){
         CannonBall cannonBall = new CannonBall(x, y, size, theta);
@@ -156,7 +172,7 @@ public class GameController implements GameListener{
         cannonBall.start();
     }
 
-    
+//--Handle mouse clicks--------------------------|    
     @FXML
     private void canvasMouseClicked(MouseEvent e){
         double mouseX = e.getX();

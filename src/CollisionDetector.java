@@ -98,9 +98,13 @@ public class CollisionDetector extends AnimationTimer{
                     Target target = targets.get(j);
                     if(checkCollision(ball, target)){
                         listener.addTime(3);
+                        listener.increaseScore();
                         listener.playTargetHit();
                         listener.removeGameObject(ball);
                         listener.removeGameObject(target);
+                        if(targets.isEmpty()){
+                            listener.gameOver();
+                        }
                         break;
                     }
                 }

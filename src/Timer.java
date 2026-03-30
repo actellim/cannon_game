@@ -55,37 +55,4 @@ public class Timer extends GameObject{
 			gc.fillText("Time Remaining: " + toString(), getX(), getY());
 		}
 	}
-
-	/* Tabula Rasa 
-
-        // 10-Second Countdown Variable
-        int[] timeRemaining = {10};
-        
-        
-        // Create 10-Second Timer        
-        countdown = new Timeline(
-        	    new KeyFrame(Duration.seconds(1), e -> {
-        	    	// Note: EventHandler<ActionEvent>() == (ActionEvent e) -> == e ->
-
-        	        timeRemaining[0]--;
-
-        	        timerCount.setText("Time Remaining: " + timeRemaining[0]);
-
-        	        // Check if time is up
-        	        if (timeRemaining[0] <= 0) {
-
-        	            timer.stop();      // stops movement of everything
-        	            countdown.stop();  // stops timer
-        	            
-        	            // Switch scene to GameOver Scene
-        	            stage.setScene(GameOverScene(stage));
-        	        }
-
-        	    })
-        	);
-        
-        // Run KeyFrame 10 times
-        countdown.setCycleCount(10);
-        countdown.play();
-		*/
 }

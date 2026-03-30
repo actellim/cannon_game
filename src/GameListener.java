@@ -8,5 +8,6 @@ public interface GameListener {
     public abstract void playTargetHit();
     public abstract void playBlockerHit();
     public abstract void playWallHit();
+    public abstract void increaseScore();
 
 }  
