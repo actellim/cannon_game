@@ -90,7 +90,7 @@ public class GameController implements GameListener{
     // Interface method for score tracking
     @Override
     public void increaseScore(){
-        this.score++;
+        this.score = this.score + (int)timer.getTime();
     }
  
     
