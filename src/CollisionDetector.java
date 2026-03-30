@@ -74,13 +74,19 @@ public class CollisionDetector extends AnimationTimer{
         double cannonBallTop = cannonBall.getY();
         double cannonBallBottom = cannonBallTop + cannonBall.getSize();
         // Potentially need to add direction checking here to prevent jitter
-        if (cannonBallTop < 0 || cannonBallBottom > canvasHeight){
-            // Allows shot banking.
-            cannonBall.setSpeedY(cannonBall.getSpeedY() * -1);
+        if (cannonBallLeft < 0 || cannonBallRight > canvasWidth){
+            return true;
+        }
+        // Allow shot banking.
+        else if (cannonBallTop < 0){
+            if(cannonBall.getSpeedY() < 0)
+                cannonBall.setSpeedY(cannonBall.getSpeedY() * -1);
             return false;
         }
-        else if (cannonBallLeft < 0 || cannonBallRight > canvasWidth){
-            return true;
+        else if (cannonBallBottom > canvasHeight){
+            if(cannonBall.getSpeedX() > 0)
+                cannonBall.setSpeedY(cannonBall.getSpeedY() * -1);
+            return false;
         }
         else
             return false;
@@ -125,7 +131,9 @@ public class CollisionDetector extends AnimationTimer{
                 // ...and the blocker!
                 if(checkCollision(ball, blocker)){
                     listener.playBlockerHit();
-                    ball.setSpeedX(ball.getSpeedX() * -1);
+                    if (ball.getSpeedX() > 0){
+                        ball.setSpeedX(ball.getSpeedX() * -1);
+                    }
                     listener.removeTime(3);
                 }
             }
