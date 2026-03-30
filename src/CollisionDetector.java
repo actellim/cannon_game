@@ -106,7 +106,7 @@ public class CollisionDetector extends AnimationTimer{
                 // Don't play the same sound effect.
                 // Don't play it every time, make use of the distribution
                 // to adjust the frequency (mid=most frequent).
-                int chanceForOffscreenCollision = r.nextInt(1, 5);
+                int chanceForOffscreenCollision = r.nextInt(1, 10);
                 if (chanceForOffscreenCollision == 4)
                     listener.playWallHit();
                 listener.removeGameObject(ball);

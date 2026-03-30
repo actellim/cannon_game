@@ -11,9 +11,8 @@ public class Target extends PotentialTarget{
         Random r = new Random();
         double height = 60; 
         double x = (targetNumber*40)+(canvasWidth/2);
-        double maxSpeed = 400;
-        double speed = r.nextDouble(blockerSpeed, maxSpeed)-
-            (blockerSpeed+(blockerSpeed+maxSpeed)/2);
+        double maxSpeed = 200;
+        double speed = r.nextDouble((double)blockerSpeed, maxSpeed);
         // Pass x, y to super
         super(x, canvasWidth, canvasHeight, speed, height);
     }

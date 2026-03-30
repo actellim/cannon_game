@@ -10,8 +10,8 @@ public class Blocker extends PotentialTarget{
         Random r = new Random();
         double height = 120; 
         double x = canvasWidth*9/20;
-        double maxSpeed = 200;
-        double speed = r.nextDouble(maxSpeed)-maxSpeed/2;
+        double maxSpeed = 100;
+        double speed = r.nextDouble(maxSpeed);
         super(x, canvasWidth, canvasHeight, speed, height);
     }
 
