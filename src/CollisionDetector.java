@@ -65,25 +65,51 @@ public class CollisionDetector extends AnimationTimer{
         }
     }
     
+    // Realizing right about now that boucing the ball off the wall 
+    // would have been a lot easier.
+    public boolean checkCollision(CannonBall cannonBall){
+        double cannonBallRight = cannonBall.getX() + cannonBall.getSize();
+        double cannonBallTop = cannonBall.getY();
+        double cannonBallBottom = cannonBallTop + cannonBall.getSize();
+        if (cannonBallTop < 0 || cannonBallRight > canvasWidth || cannonBallBottom > canvasHeight){
+            return true;
+        }
+        else
+            return false;
+        // Okay maybe that wasn't so bad.
+    }
+    
 
     public void handle(long now){
         // Can't use iterators and remove the objects
         // from the field, need to for loop. Also,
         // need to count down to avoid stack issues.
+        // Iterate through the list of cannon balls.
         for(int i = cannonBalls.size()-1; i >= 0; i--){
             CannonBall ball = cannonBalls.get(i);
-            for(int j = targets.size()-1; j >=0; j--){
-                Target target = targets.get(j);
-                if(checkCollision(ball, target)){
-                    listener.addTime(3);
-                    listener.removeGameObject(ball);
-                    listener.removeGameObject(target);
-                    break;
-                }
-            }
-            if(checkCollision(ball, blocker)){
-                listener.removeTime(3);
+            // Check for collision with the walls.
+            if (checkCollision(ball)){
+                listener.playWallHit();
                 listener.removeGameObject(ball);
+            }
+            // Check for collision with the target list.
+            else{
+                for(int j = targets.size()-1; j >=0; j--){
+                    Target target = targets.get(j);
+                    if(checkCollision(ball, target)){
+                        listener.addTime(3);
+                        listener.playTargetHit();
+                        listener.removeGameObject(ball);
+                        listener.removeGameObject(target);
+                        break;
+                    }
+                }
+                // ...and the blocker!
+                if(checkCollision(ball, blocker)){
+                    listener.playBlockerHit();
+                    listener.removeGameObject(ball);
+                    listener.removeTime(3);
+                }
             }
         }
     }

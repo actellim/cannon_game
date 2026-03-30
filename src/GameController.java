@@ -11,6 +11,7 @@ public class GameController implements GameListener{
     // ref: https://openjfx.io/javadoc/23/javafx.graphics/javafx/scene/canvas/Canvas.html
     @FXML private Canvas gameCanvas;
     private GraphicsContext gc;
+    private SoundManager soundManager;
     private Blocker blocker;
     private Cannon cannon;
     private ArrayList<Target> targets;
@@ -50,6 +51,7 @@ public class GameController implements GameListener{
             blockerAndTargets.add(target);
             gameObjects.add(target);
         }
+        soundManager = new SoundManager();
         collisionDetector = new CollisionDetector(canvasWidth, canvasHeight, cannonBalls, targets, blocker, this);
         timer = new Timer(this); // Initial duration hardcoded to 10s.
         gameObjects.add(timer);
@@ -100,6 +102,7 @@ public class GameController implements GameListener{
             }
         });
     }
+
     
     @Override
     public void removeGameObject(GameObject o){
@@ -113,6 +116,24 @@ public class GameController implements GameListener{
             blockerAndTargets.remove(o);
         }
     }
+    
+
+    @Override
+    public void playTargetHit(){
+        soundManager.targetHit();
+    }
+    
+
+    @Override
+    public void playBlockerHit(){
+        soundManager.blockerHit();
+    }
+    
+    @Override
+    public void playWallHit(){
+        soundManager.wallHit();
+    }
+
 
     @Override
     public void addTime(double t){
@@ -131,8 +152,10 @@ public class GameController implements GameListener{
         CannonBall cannonBall = new CannonBall(x, y, size, theta);
         cannonBalls.add(cannonBall);
         gameObjects.add(cannonBall);
+        soundManager.cannonFire();
         cannonBall.start();
     }
+
     
     @FXML
     private void canvasMouseClicked(MouseEvent e){
