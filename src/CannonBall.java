@@ -4,6 +4,7 @@ import javafx.scene.paint.Paint;
 
 public class CannonBall extends GameObject{
     private double theta, speedX, speedY, size;
+    private boolean ballCounted;
 
     public CannonBall(double x, double y, double size, double theta) {
         this.theta = theta;
@@ -13,6 +14,7 @@ public class CannonBall extends GameObject{
         this.speedY = speed*Math.sin(theta);
         // Support for dynamic barrel length resize
         this.size = size;
+        this.ballCounted = false;
         super(x-size/2, y-size/2);
     }
     
@@ -33,6 +35,10 @@ public class CannonBall extends GameObject{
         return this.theta;
     }
     
+    public boolean getBallCounted(){
+        return this.ballCounted;
+    }
+    
     public void setSpeedX(double newSpeedX){
         this.speedX = newSpeedX;
     }
@@ -43,6 +49,10 @@ public class CannonBall extends GameObject{
     
     public void setTheta(double newTheta){
         this.theta = newTheta;
+    }
+    
+    public void setBallCounted(){
+        this.ballCounted = true;
     }
 
     

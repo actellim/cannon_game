@@ -32,7 +32,7 @@ public class SelectScreen extends Alert{
             headerText = new String("You lose.\n");
         }
         headerText = headerText + "Final Score: " + finalScore.toString() 
-        + "\nShots Fired: " + shotsFired.toString() + "\nSeconds Taken: " 
+        + "\nShots Fired: " + shotsFired.toString() + "\nSeconds Elapsed: " 
         + totalTime.intValue();
         this.setHeaderText(headerText);
         this.setContentText("Play Again?");

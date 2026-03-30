@@ -15,7 +15,7 @@ public class CollisionDetector extends AnimationTimer{
     public CollisionDetector(double canvasWidth, double canvasHeight,
         ArrayList<CannonBall> cannonBalls, ArrayList<Target> targets,
         Blocker blocker, GameListener listener
-    ) {
+    ){
         this.cannonBalls = cannonBalls;
         this.targets = targets;
         this.blocker = blocker;
@@ -67,7 +67,7 @@ public class CollisionDetector extends AnimationTimer{
         }
     }
     
-    // Check collision with canvas edge.
+    // Overloaded method to check collision with canvas edge.
     public boolean checkCollision(CannonBall cannonBall){
         double cannonBallLeft = cannonBall.getX();
         double cannonBallRight = cannonBallLeft + cannonBall.getSize();
@@ -104,12 +104,11 @@ public class CollisionDetector extends AnimationTimer{
             if (checkCollision(ball)){
                 Random r = new Random();
                 // Don't play the same sound effect.
-                // Don't play it every time.
+                // Don't play it every time, make use of the distribution
+                // to adjust the frequency (mid=most frequent).
                 int chanceForOffscreenCollision = r.nextInt(1, 5);
-                if (chanceForOffscreenCollision == 3)
+                if (chanceForOffscreenCollision == 4)
                     listener.playWallHit();
-                if (chanceForOffscreenCollision == 5)
-                    listener.playTargetHit();
                 listener.removeGameObject(ball);
             }
             // Check for collision with the target list.
@@ -130,11 +129,15 @@ public class CollisionDetector extends AnimationTimer{
                 }
                 // ...and the blocker!
                 if(checkCollision(ball, blocker)){
-                    listener.playBlockerHit();
-                    if (ball.getSpeedX() > 0){
-                        ball.setSpeedX(ball.getSpeedX() * -1);
+                    // fix a stubborn bug with top/bottom collision.
+                    if (!ball.getBallCounted()){
+                        listener.removeTime(3);
+                        listener.playBlockerHit();
+                        if (ball.getSpeedX() > 0){
+                            ball.setSpeedX(ball.getSpeedX() * -1);
+                        }
                     }
-                    listener.removeTime(3);
+                    ball.setBallCounted();
                 }
             }
         }

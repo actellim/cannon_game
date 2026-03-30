@@ -110,7 +110,7 @@ public class GameController implements GameListener{
         Platform.runLater(new Runnable() {
             @Override 
             public void run() {
-                SelectScreen gameOver = new SelectScreen(score, timer.getTotalTime(), shotsFired, gameWon);
+                SelectScreen gameOver = new SelectScreen(score, timer.getPlayedTime(), shotsFired, gameWon);
                 if(!gameOver.promptUser())
                     Platform.exit();
                 else

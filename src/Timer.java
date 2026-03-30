@@ -25,6 +25,10 @@ public class Timer extends GameObject{
 	public Double getTotalTime(){
 		return totalTime;
 	}
+	
+	public Double getPlayedTime(){
+		return totalTime-remaining;
+	}
 
 	// Increment
 	public void addTime(double t){

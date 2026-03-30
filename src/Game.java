@@ -14,6 +14,8 @@ public class Game extends Application {
         Scene scene = new Scene(root);
         stage.setTitle("Cannon Game");
         stage.setScene(scene);
+        //Prevent the user from messing up our math
+        stage.setResizable(false);
         stage.show();
     }
     
