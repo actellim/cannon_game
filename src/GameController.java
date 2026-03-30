@@ -17,9 +17,10 @@ public class GameController implements GameListener{
     private ArrayList<PotentialTarget> blockerAndTargets;
     private ArrayList<CannonBall> cannonBalls;
     private ArrayList<GameObject> gameObjects;
-    private Renderer r;
+    private Renderer renderer;
     private double canvasWidth, canvasHeight, blockerSpeed;
-    private Timer t;
+    private Timer timer;
+    private CollisionDetector collisionDetector;
     private SelectScreen popup;
 
     public void initialize() {
@@ -49,15 +50,16 @@ public class GameController implements GameListener{
             blockerAndTargets.add(target);
             gameObjects.add(target);
         }
-        t = new Timer(this); // Initial duration hardcoded to 10s.
-        gameObjects.add(t);
+        collisionDetector = new CollisionDetector(canvasWidth, canvasHeight, cannonBalls, targets, blocker, this);
+        timer = new Timer(this); // Initial duration hardcoded to 10s.
+        gameObjects.add(timer);
         cannon = new Cannon(canvasHeight, this);
         gameObjects.add(cannon);
         // Get the canvas graphics writer.
         // ref: https://openjfx.io/javadoc/23/javafx.graphics/javafx/scene/canvas/GraphicsContext.html
         gc = gameCanvas.getGraphicsContext2D();
         // Needs to come after we get the context from the canvas!
-        r = new Renderer(gc, gameObjects, canvasWidth, canvasHeight);
+        renderer = new Renderer(gc, gameObjects, canvasWidth, canvasHeight);
  
         // ref: https://openjfx.io/javadoc/17/javafx.controls/javafx/scene/control/Alert.html
         popup = new SelectScreen();
@@ -67,7 +69,8 @@ public class GameController implements GameListener{
                 gameObject.start(); // non-blocking!
             }
             // Start rendering the objects. **Happens in another thread, non-blocking.**
-            r.start();
+            renderer.start();
+            collisionDetector.start();
         }
         else
             // Exit gracefully -- need to use Platform.exit() here to avoid
@@ -84,8 +87,9 @@ public class GameController implements GameListener{
         // Stop the presses -- they're out of time!
         for (GameObject gameObject : gameObjects){
             gameObject.stop();
-            r.stop();            
         }
+        renderer.stop();            
+        collisionDetector.stop();
         // Naievely call init again to see what happens... blocked the thread.
         // ref: https://openjfx.io/javadoc/17/javafx.graphics/javafx/application/Platform.html#runLater(java.lang.Runnable)
         // ref: https://stackoverflow.com/questions/13784333/platform-runlater-and-task-in-javafx
@@ -95,6 +99,30 @@ public class GameController implements GameListener{
                 initialize();
             }
         });
+    }
+    
+    @Override
+    public void removeGameObject(GameObject o){
+        o.stop();
+        gameObjects.remove(o);
+        if (o instanceof CannonBall){
+            cannonBalls.remove(o);
+        }
+        else if (o instanceof Target){
+            targets.remove(o);
+            blockerAndTargets.remove(o);
+        }
+    }
+
+    @Override
+    public void addTime(double t){
+        timer.addTime(t);
+    }
+    
+
+    @Override
+    public void removeTime(double t){
+        timer.removeTime(t);
     }
     
 

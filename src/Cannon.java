@@ -38,6 +38,8 @@ public class Cannon extends GameObject{
         // to the location of the mouse click.
         double a = getX();
         double b = getY();
+        // src: https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Math.html
+        // I learned this here!
         this.nextTheta = Math.atan2((y-b), (x-a));   // tan^-1 (y-b)/(x-a)
     }
     
