@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Random;
 
 import javafx.animation.AnimationTimer;
 
@@ -37,6 +38,7 @@ public class CollisionDetector extends AnimationTimer{
     }
     
 
+    // Check collision between a canonball and the blocker or a target.
     private boolean checkCollision(CannonBall cannonBall, PotentialTarget blockerOrTarget){
         boolean xCol = false;
         boolean yCol = false;
@@ -65,8 +67,7 @@ public class CollisionDetector extends AnimationTimer{
         }
     }
     
-    // Realizing right about now that boucing the ball off the wall 
-    // would have been a lot easier.
+    // Check collision with canvas edge.
     public boolean checkCollision(CannonBall cannonBall){
         double cannonBallLeft = cannonBall.getX();
         double cannonBallRight = cannonBallLeft + cannonBall.getSize();
@@ -74,29 +75,35 @@ public class CollisionDetector extends AnimationTimer{
         double cannonBallBottom = cannonBallTop + cannonBall.getSize();
         // Potentially need to add direction checking here to prevent jitter
         if (cannonBallTop < 0 || cannonBallBottom > canvasHeight){
+            // Allows shot banking.
             cannonBall.setSpeedY(cannonBall.getSpeedY() * -1);
             return false;
         }
         else if (cannonBallLeft < 0 || cannonBallRight > canvasWidth){
-
             return true;
         }
         else
             return false;
-        // Okay maybe that wasn't so bad.
     }
     
 
     public void handle(long now){
         // Can't use iterators and remove the objects
         // from the field, need to for loop. Also,
-        // need to count down to avoid stack issues.
+        // need to count down to avoid list removal issues.
         // Iterate through the list of cannon balls.
         for(int i = cannonBalls.size()-1; i >= 0; i--){
             CannonBall ball = cannonBalls.get(i);
             // Check for collision with the walls.
             if (checkCollision(ball)){
-                listener.playWallHit();
+                Random r = new Random();
+                // Don't play the same sound effect.
+                // Don't play it every time.
+                int chanceForOffscreenCollision = r.nextInt(1, 5);
+                if (chanceForOffscreenCollision == 3)
+                    listener.playWallHit();
+                if (chanceForOffscreenCollision == 5)
+                    listener.playTargetHit();
                 listener.removeGameObject(ball);
             }
             // Check for collision with the target list.
