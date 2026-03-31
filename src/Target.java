@@ -1,7 +1,10 @@
 import java.util.Random;
 
 import javafx.scene.canvas.GraphicsContext;
-import javafx.scene.paint.Paint;
+import javafx.scene.paint.Color;
+import javafx.scene.paint.CycleMethod;
+import javafx.scene.paint.LinearGradient;
+import javafx.scene.paint.Stop;
 
 public class Target extends PotentialTarget{
 
@@ -19,9 +22,23 @@ public class Target extends PotentialTarget{
     
     @Override
     public void render(GraphicsContext gc){
-        gc.setFill(Paint.valueOf("ORANGE"));
+    	gc.setFill(new LinearGradient(
+    		    0, 0,   // start top
+    		    0, 1,   // end bottom
+    		    true,   // proportional
+    		    CycleMethod.NO_CYCLE,
+    		    new Stop(0, Color.LIGHTCYAN), // top
+    		    new Stop(0.5, Color.LIGHTSKYBLUE),  // mid
+    		    new Stop(1, Color.SKYBLUE)       // bottom
+    		));
         gc.fillRect(getX(), getY(), getWidth(), getHeight());
+
+    		// I wanted it look like glass so highlight line for "glossy" effect
+    		gc.setStroke(Color.rgb(255, 255, 255, 0.6));
+    		gc.setLineWidth(2);
+    		gc.strokeLine(getX(), getY() + getHeight() * 0.2, getX() + getWidth(), getY() + getHeight() * 0.2);
     }
+
 
     // Update logical position every frame.
     @Override

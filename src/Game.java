@@ -11,6 +11,7 @@ public class Game extends Application {
     public void start(Stage stage) throws Exception{
         Parent root = FXMLLoader.load(
             getClass().getResource("Game.fxml"));
+        root.setStyle("-fx-background-color: azure; -fx-cursor: hand;");
         Scene scene = new Scene(root);
         stage.setTitle("Cannon Game");
         stage.setScene(scene);

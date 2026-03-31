@@ -1,5 +1,7 @@
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Paint;
+import javafx.scene.text.Font;
+import javafx.scene.text.FontWeight;
 
 public class Timer extends GameObject{
 	
@@ -62,6 +64,7 @@ public class Timer extends GameObject{
 	public void render(GraphicsContext gc){
 		// Draw the time left.
 		gc.setFill(Paint.valueOf("BLACK"));
+		gc.setFont(Font.font("Comic Sans MS", FontWeight.BOLD, 20));
 		if (getTime() > 0) {
 			gc.fillText("Time Remaining: " + toString(), getX(), getY());
 		}

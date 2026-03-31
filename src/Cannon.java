@@ -1,6 +1,10 @@
 import javafx.scene.canvas.GraphicsContext;
-import javafx.scene.paint.Paint;
 import javafx.scene.shape.ArcType;
+import javafx.scene.paint.Color;
+import javafx.scene.paint.CycleMethod;
+import javafx.scene.paint.LinearGradient;
+import javafx.scene.paint.RadialGradient;
+import javafx.scene.paint.Stop;
 
 public class Cannon extends GameObject{
     private double[] barrelX, barrelY;
@@ -85,14 +89,40 @@ public class Cannon extends GameObject{
     
 
     public void render(GraphicsContext gc){
-        
         // Draw the barrel
-        gc.setFill(Paint.valueOf("GREY"));
+    	gc.setFill(new LinearGradient(
+    		    0, 0,   // start at top
+    		    0, 1,   // end at bottom
+    		    true,   // proportional (fits shape)
+    		    CycleMethod.NO_CYCLE,
+    		    new Stop(0, Color.LIGHTGRAY),  // top color
+    		    new Stop(1, Color.SLATEGREY)    // bottom color
+    		));
         gc.fillPolygon(barrelX, barrelY, 4);
+        
+        // Barrel Rim
+        gc.setStroke(Color.DARKGRAY);
+        gc.setLineWidth(3);
+        gc.strokeLine(barrelX[2], barrelY[2], barrelX[3], barrelY[3]);
+
+        gc.setStroke(Color.SLATEGREY);
+        gc.setLineWidth(1);
+        gc.strokeLine(barrelX[2], barrelY[2], barrelX[3], barrelY[3]);
+        
         // Draw the base
-        gc.setFill(Paint.valueOf("BROWN"));
+        gc.setFill(new LinearGradient(0, 0, 1, 1, true, CycleMethod.NO_CYCLE,
+        	    new Stop(0, Color.DARKGOLDENROD),
+        	    new Stop(1, Color.SADDLEBROWN)));
         // Magic numbers because it doesn't move.
         gc.fillArc(getX()-30, getY()-30, 60.0, 60.0, 90, -180.0, ArcType.valueOf("OPEN"));
+        gc.setFill(new RadialGradient(0, 0,
+        	    getX(), getY(),  // center
+        	    20,              // radius
+        	    false,
+        	    CycleMethod.NO_CYCLE,
+        	    new Stop(0, Color.YELLOW),
+        	    new Stop(1, Color.RED)));
+        gc.fillArc(getX()-20, getY()-20, 40.0, 40.0, 90, -180.0, ArcType.valueOf("OPEN"));
     }
 
 

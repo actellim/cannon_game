@@ -1,5 +1,8 @@
 import javafx.scene.canvas.GraphicsContext;
-import javafx.scene.paint.Paint;
+import javafx.scene.paint.Color;
+import javafx.scene.paint.CycleMethod;
+import javafx.scene.paint.LinearGradient;
+import javafx.scene.paint.Stop;
 
 
 public class CannonBall extends GameObject{
@@ -58,7 +61,14 @@ public class CannonBall extends GameObject{
     
     public void render(GraphicsContext gc){
         
-        gc.setFill(Paint.valueOf("BLACK"));
+    	gc.setFill(new LinearGradient(
+    		    0, 0,   // start at top
+    		    0, 1,   // end at bottom
+    		    true,   // proportional coordinates (0–1)
+    		    CycleMethod.NO_CYCLE,
+    		    new Stop(0, Color.SILVER),  // top color
+    		    new Stop(1, Color.SLATEGREY)       // bottom color
+    		));
         gc.fillOval(getX(), getY(), this.size, this.size);
     }
     
